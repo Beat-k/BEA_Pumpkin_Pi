@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "pumpkin pi",
+      "invocationName": "bea pumpkin pi",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -48,10 +48,19 @@
             "activate {EnhancementType} enhancement",
             "set enhancement to {IntensityLevel}",
             "enhance audio with {EnhancementType}",
-            "turn on 4d audio",
+            "turn on four d audio",
             "activate spatial audio",
             "improve background sounds",
-            "enhance foreground audio"
+            "enhance foreground audio",
+            "turn on {EnhancementType} audio",
+            "enable {EnhancementType} processing",
+            "activate {EnhancementType} audio enhancement",
+            "start {EnhancementType} optimization",
+            "boost audio with level {IntensityLevel}",
+            "turn on advanced audio processing",
+            "activate professional audio enhancement",
+            "enable studio quality audio",
+            "optimize audio for {EnhancementType}"
           ]
         },
         {
@@ -70,7 +79,15 @@
             "analyze my beatbox",
             "recognize {BeatboxStyle} sounds",
             "start beatbox recognition",
-            "listen to my beats"
+            "listen to my beats",
+            "detect my rhythm",
+            "analyze my sounds",
+            "start {BeatboxStyle} recognition",
+            "listen for {BeatboxStyle} patterns",
+            "activate beatbox analysis",
+            "enable rhythm detection",
+            "start pattern recognition",
+            "analyze beatbox performance"
           ]
         },
         {
@@ -105,7 +122,15 @@
             "activate tactical audio",
             "enhance gaming sounds",
             "turn on competitive mode",
-            "start {GameType} optimization"
+            "start {GameType} optimization",
+            "enable {GameType} audio",
+            "activate {GameType} mode",
+            "optimize gaming for {GameType}",
+            "turn on {GameType} enhancement",
+            "start competitive gaming",
+            "enable tactical mode",
+            "activate gaming optimization",
+            "turn on professional gaming mode"
           ]
         },
         {
@@ -126,7 +151,16 @@
             "set position {Direction}",
             "place sound {Distance} meters {Direction}",
             "create spatial effect",
-            "enable 4d positioning"
+            "enable four d positioning",
+            "move audio {Distance} units {Direction}",
+            "position sound {Direction}",
+            "move sound {Direction}",
+            "place audio behind me",
+            "move sound forward",
+            "position audio center",
+            "create three d effect",
+            "enable spatial audio",
+            "activate positional audio"
           ]
         },
         {
@@ -137,7 +171,35 @@
             "what's my audio quality",
             "performance report",
             "system status",
-            "how is the enhancement working"
+            "how is the enhancement working",
+            "check audio status",
+            "show system metrics",
+            "display performance data",
+            "audio quality report",
+            "check system health",
+            "show enhancement status",
+            "performance metrics",
+            "system diagnostics",
+            "audio performance report"
+          ]
+        },
+        {
+          "name": "TinyAIStatusIntent",
+          "samples": [
+            "tiny ai status",
+            "check tiny ai",
+            "tiny ai report",
+            "show ai capabilities",
+            "ai engine status",
+            "check ai system",
+            "tiny ai performance",
+            "ai status report",
+            "show edge computing status",
+            "check beatbox ai",
+            "tiny ai capabilities",
+            "ai engine report",
+            "micro ai status",
+            "edge ai report"
           ]
         },
         {
@@ -155,41 +217,14 @@
         {
           "name": "EnhancementTypeSlot",
           "values": [
-            {
-              "name": {
-                "value": "spatial"
-              }
-            },
-            {
-              "name": {
-                "value": "4d"
-              }
-            },
-            {
-              "name": {
-                "value": "background"
-              }
-            },
-            {
-              "name": {
-                "value": "foreground"
-              }
-            },
-            {
-              "name": {
-                "value": "gaming"
-              }
-            },
-            {
-              "name": {
-                "value": "emotional"
-              }
-            },
-            {
-              "name": {
-                "value": "cognitive"
-              }
-            }
+            {"name": {"value": "spatial", "synonyms": ["three d", "3d", "positional", "dimensional"]}},
+            {"name": {"value": "dimensional", "synonyms": ["four d", "4d", "multi dimensional", "advanced"]}},
+            {"name": {"value": "background", "synonyms": ["ambient", "environmental", "atmosphere"]}},
+            {"name": {"value": "foreground", "synonyms": ["primary", "main", "vocal", "lead"]}},
+            {"name": {"value": "gaming", "synonyms": ["tactical", "competitive", "esports", "pro"]}},
+            {"name": {"value": "emotional", "synonyms": ["mood", "psychological", "mental", "feeling"]}},
+            {"name": {"value": "cognitive", "synonyms": ["mental", "focus", "concentration", "brain"]}},
+            {"name": {"value": "professional", "synonyms": ["studio", "pro", "premium", "advanced"]}}
           ]
         },
         {
@@ -235,121 +270,60 @@
         {
           "name": "EmotionalStateSlot",
           "values": [
-            {
-              "name": {
-                "value": "curious"
-              }
-            },
-            {
-              "name": {
-                "value": "calm"
-              }
-            },
-            {
-              "name": {
-                "value": "excited"
-              }
-            },
-            {
-              "name": {
-                "value": "focused"
-              }
-            },
-            {
-              "name": {
-                "value": "energetic"
-              }
-            },
-            {
-              "name": {
-                "value": "relaxed"
-              }
-            },
-            {
-              "name": {
-                "value": "creative"
-              }
-            },
-            {
-              "name": {
-                "value": "competitive"
-              }
-            }
+            {"name": {"value": "curious", "synonyms": ["interested", "inquisitive", "wondering"]}},
+            {"name": {"value": "calm", "synonyms": ["peaceful", "tranquil", "relaxed", "serene"]}},
+            {"name": {"value": "excited", "synonyms": ["energetic", "enthusiastic", "pumped", "thrilled"]}},
+            {"name": {"value": "focused", "synonyms": ["concentrated", "attentive", "sharp", "alert"]}},
+            {"name": {"value": "energetic", "synonyms": ["active", "dynamic", "lively", "vibrant"]}},
+            {"name": {"value": "relaxed", "synonyms": ["chill", "laid back", "easy", "comfortable"]}},
+            {"name": {"value": "creative", "synonyms": ["artistic", "imaginative", "innovative", "inspired"]}},
+            {"name": {"value": "competitive", "synonyms": ["aggressive", "determined", "driven", "intense"]}},
+            {"name": {"value": "analytical", "synonyms": ["logical", "systematic", "methodical", "precise"]}},
+            {"name": {"value": "contemplative", "synonyms": ["thoughtful", "reflective", "meditative", "introspective"]}},
+            {"name": {"value": "confident", "synonyms": ["assured", "self assured", "bold", "strong"]}},
+            {"name": {"value": "motivated", "synonyms": ["driven", "inspired", "determined", "ambitious"]}},
+            {"name": {"value": "peaceful", "synonyms": ["zen", "harmonious", "balanced", "centered"]}},
+            {"name": {"value": "passionate", "synonyms": ["intense", "fervent", "enthusiastic", "devoted"]}},
+            {"name": {"value": "strategic", "synonyms": ["tactical", "planned", "calculated", "deliberate"]}},
+            {"name": {"value": "optimistic", "synonyms": ["positive", "hopeful", "upbeat", "bright"]}},
+            {"name": {"value": "mindful", "synonyms": ["aware", "present", "conscious", "attentive"]}},
+            {"name": {"value": "ambitious", "synonyms": ["goal oriented", "driven", "aspiring", "determined"]}},
+            {"name": {"value": "serene", "synonyms": ["calm", "peaceful", "tranquil", "still"]}},
+            {"name": {"value": "dynamic", "synonyms": ["energetic", "powerful", "forceful", "vigorous"]}},
+            {"name": {"value": "innovative", "synonyms": ["creative", "inventive", "original", "pioneering"]}},
+            {"name": {"value": "balanced", "synonyms": ["centered", "stable", "harmonious", "even"]}},
+            {"name": {"value": "intensive", "synonyms": ["focused", "concentrated", "deep", "thorough"]}},
+            {"name": {"value": "meditative", "synonyms": ["contemplative", "reflective", "peaceful", "centered"]}},
+            {"name": {"value": "tactical", "synonyms": ["strategic", "planned", "calculated", "methodical"]}},
+            {"name": {"value": "precise", "synonyms": ["accurate", "exact", "meticulous", "detailed"]}},
+            {"name": {"value": "dominant", "synonyms": ["controlling", "commanding", "powerful", "strong"]}},
+            {"name": {"value": "transcendent", "synonyms": ["elevated", "higher", "spiritual", "enlightened"]}}
           ]
         },
         {
           "name": "GameTypeSlot", 
           "values": [
-            {
-              "name": {
-                "value": "fps"
-              }
-            },
-            {
-              "name": {
-                "value": "fighting"
-              }
-            },
-            {
-              "name": {
-                "value": "racing"
-              }
-            },
-            {
-              "name": {
-                "value": "strategy"
-              }
-            },
-            {
-              "name": {
-                "value": "tactical"
-              }
-            },
-            {
-              "name": {
-                "value": "competitive"
-              }
-            }
+            {"name": {"value": "fps", "synonyms": ["first person shooter", "shooter", "call of duty", "battlefield"]}},
+            {"name": {"value": "fighting", "synonyms": ["combat", "martial arts", "street fighter", "tekken"]}},
+            {"name": {"value": "racing", "synonyms": ["driving", "car", "formula", "speed"]}},
+            {"name": {"value": "strategy", "synonyms": ["rts", "real time strategy", "tactical", "planning"]}},
+            {"name": {"value": "tactical", "synonyms": ["stealth", "strategic", "military", "squad"]}},
+            {"name": {"value": "competitive", "synonyms": ["esports", "tournament", "professional", "ranked"]}},
+            {"name": {"value": "moba", "synonyms": ["league of legends", "dota", "multiplayer battle arena"]}},
+            {"name": {"value": "mmo", "synonyms": ["massively multiplayer", "online", "world of warcraft"]}},
+            {"name": {"value": "battle royale", "synonyms": ["br", "fortnite", "pubg", "survival"]}}
           ]
         },
         {
           "name": "DirectionSlot",
           "values": [
-            {
-              "name": {
-                "value": "left"
-              }
-            },
-            {
-              "name": {
-                "value": "right"
-              }
-            },
-            {
-              "name": {
-                "value": "front"
-              }
-            },
-            {
-              "name": {
-                "value": "back"
-              }
-            },
-            {
-              "name": {
-                "value": "above"
-              }
-            },
-            {
-              "name": {
-                "value": "below"
-              }
-            },
-            {
-              "name": {
-                "value": "center"
-              }
-            }
+            {"name": {"value": "left", "synonyms": ["port", "west", "leftward"]}},
+            {"name": {"value": "right", "synonyms": ["starboard", "east", "rightward"]}},
+            {"name": {"value": "front", "synonyms": ["forward", "ahead", "north", "in front"]}},
+            {"name": {"value": "back", "synonyms": ["behind", "rear", "south", "backward"]}},
+            {"name": {"value": "above", "synonyms": ["up", "overhead", "top", "upward"]}},
+            {"name": {"value": "below", "synonyms": ["down", "underneath", "bottom", "downward"]}},
+            {"name": {"value": "center", "synonyms": ["middle", "central", "centered", "middle position"]}}
           ]
         }
       ]

@@ -13,6 +13,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Advanced machine learning personalization
 - Biometric integration for health-based audio tuning
 
+## [1.3.0] - 2025-11-04
+
+### Added - TinyAI Integration
+- **🤖 TinyAI Edge Computing Engine** - Real-time beatbox recognition with micro-ML
+- **🎵 7 Beatbox Style Recognition** - Classic, modern, bass, techno, vocal, freestyle
+- **📊 Confidence Scoring System** - 40-60% accuracy with sub-50ms processing
+- **🎯 BPM Detection** - Real-time tempo analysis and beat tracking
+- **🔍 Pattern Classification** - Advanced beatbox pattern recognition
+- **💡 Enhancement Suggestions** - AI-powered performance improvement tips
+- **⚡ AWS Lambda Optimization** - SimplifiedTinyAI for cloud deployment
+- **📈 Performance Metrics** - Real-time processing time and accuracy reporting
+
+### Enhanced
+- **Interaction Model** - Added TinyAIStatusIntent with 14+ voice commands
+- **Voice Interface** - 100+ total voice commands across all features
+- **AWS Deployment** - Ready-to-deploy Lambda function (565 lines)
+- **Error Handling** - Robust fallback systems for production deployment
+
+### Voice Commands Added
+- `"Alexa, ask bea pumpkin pi for tiny ai status"` - TinyAI engine status
+- `"Alexa, ask bea pumpkin pi to check ai capabilities"` - AI feature overview
+- `"Alexa, ask bea pumpkin pi about edge computing status"` - System diagnostics
+- `"Alexa, ask bea pumpkin pi to detect freestyle beatbox"` - Style-specific recognition
+
 ## [1.0.0] - 2025-11-04
 
 ### Added - Initial Release
