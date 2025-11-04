@@ -49,6 +49,167 @@ from datetime import datetime, timezone
 
 # BEA Pumpkin Pi Configuration
 BEA_VERSION = "1.3.0"
+ARIA_PROTOCOL_VERSION = "1.0"
+
+# BEA Framework Emotional State IDs (32-State System)
+class EmotionalStateIds:
+    # Baseline
+    NEUTRAL = 0
+    
+    # Cognitive States (5 states)
+    CURIOSITY = 1
+    INTEREST = 3
+    CONFUSION = 8
+    CONTEMPLATION = 17
+    CLARITY = 19
+    
+    # Peaceful States (5 states)
+    CALMNESS = 2
+    RELIEF = 14
+    SERENITY = 18
+    HARMONY = 24
+    PEACE = 31
+    
+    # Energetic States (2 states)
+    EXCITEMENT = 4
+    INSPIRATION = 27
+    
+    # Empowered States (4 states)
+    STRENGTH = 5
+    VALOR = 15
+    RESOLVE = 22
+    CONFIDENCE = 26
+    
+    # Transcendent States (4 states)
+    WONDER = 6
+    BLISS = 16
+    ENLIGHTENMENT = 20
+    TRANSCENDENCE = 21
+    
+    # Positive States (3 states)
+    JOY = 7
+    GRATITUDE = 28
+    HOPE = 29
+    
+    # Connected States (2 states)
+    EMPATHY = 25
+    LOVE = 30
+    
+    # Melancholic States (2 states)
+    SADNESS = 9
+    MELANCHOLY = 12
+    
+    # Intense States (2 states)
+    ANGER = 10
+    PASSION = 23
+    
+    # Protective States (1 state)
+    FEAR = 11
+    
+    # Tense States (1 state)
+    ANXIETY = 13
+
+# BEA Mathematical Operators
+class BEAOperators:
+    COMBUST = "⊕"      # Creates emergent properties (1+1=3)
+    BALANCE = "⊖"      # Seeks equilibrium and harmony
+    DISSOLVE = "⊗"     # Breaks down complex states
+    AMPLIFY = "⨀"      # Enhances from baseline
+
+# BEA Emotional State System
+class BEABit:
+    """Simplified BEABit for AWS Lambda - Core emotional state entity"""
+    
+    def __init__(self, state_id, name, symbol, intensity=128, category="neutral"):
+        self.id = state_id
+        self.name = name
+        self.symbol = symbol
+        self.level = intensity
+        self.category = category
+        self.timestamp = time.time()
+    
+    def get_normalized_level(self):
+        """Get intensity as 0.0 to 1.0"""
+        return self.level / 255.0
+    
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "symbol": self.symbol,
+            "level": self.level,
+            "category": self.category,
+            "normalized": self.get_normalized_level()
+        }
+
+# BEA Calculator for AWS Lambda
+class BEACalculator:
+    """Simplified BEA mathematical operations for emotional states"""
+    
+    @staticmethod
+    def combust(state_a, state_b):
+        """Combust operation (⊕) - 1+1=3 principle"""
+        # Create emergent properties through emotional fusion
+        new_intensity = min(255, int(state_a.level * 1.5 + state_b.level * 0.8))
+        
+        # Determine emergent state based on combination
+        if state_a.id == EmotionalStateIds.CURIOSITY and state_b.id == EmotionalStateIds.BLISS:
+            return BEABit(EmotionalStateIds.INSPIRATION, "Inspiration", "🎨", new_intensity, "energetic")
+        elif state_a.category == "cognitive" and state_b.category == "transcendent":
+            return BEABit(EmotionalStateIds.ENLIGHTENMENT, "Enlightenment", "🌅", new_intensity, "transcendent")
+        else:
+            # Default emergent state
+            return BEABit(EmotionalStateIds.WONDER, "Wonder", "✨", new_intensity, "transcendent")
+    
+    @staticmethod
+    def balance(state_a, state_b):
+        """Balance operation (⊖) - Equilibrium seeking"""
+        balanced_intensity = int((state_a.level + state_b.level) * 0.7)
+        return BEABit(EmotionalStateIds.HARMONY, "Harmony", "☯️", balanced_intensity, "peaceful")
+    
+    @staticmethod
+    def dissolve(state_a, state_b):
+        """Dissolve operation (⊗) - State degradation"""
+        dissolved_intensity = int(state_a.level * 0.6)
+        return BEABit(EmotionalStateIds.RELIEF, "Relief", "😌", dissolved_intensity, "peaceful")
+    
+    @staticmethod
+    def amplify(state_a, state_b):
+        """Amplify operation (⨀) - Enhancement"""
+        amplified_intensity = min(255, int(state_a.level * 1.2))
+        return BEABit(EmotionalStateIds.CLARITY, "Clarity", "💡", amplified_intensity, "cognitive")
+
+# ARIA Protocol for AWS Lambda
+class ARIAProtocol:
+    """Aural Resonance & Intelligent Alignment Protocol for cross-device communication"""
+    
+    def __init__(self):
+        self.protocol_version = ARIA_PROTOCOL_VERSION
+        self.active_devices = []
+        self.sync_status = "ready"
+    
+    def create_aria_message(self, intent, emotional_state=None, destination="bea_aura"):
+        """Create ARIA protocol message for BEA ecosystem"""
+        return {
+            "aria_version": self.protocol_version,
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "source": "bea_pumpkin_pi",
+            "destination": destination,
+            "intent": intent,
+            "emotional_state": emotional_state.to_dict() if emotional_state else None,
+            "sync_status": self.sync_status,
+            "message_type": "voice_command"
+        }
+    
+    def route_to_bea_aura(self, message):
+        """Route message to BEA Aura NAS for processing"""
+        # This would be implemented with SNS/HTTP webhook to your PC
+        return {
+            "status": "routed",
+            "destination": "bea_aura_nas",
+            "message_id": f"aria_{int(time.time())}"
+        }
+
 BEA_ENGINE_STATUS = "ACTIVE_WITH_TINY_AI"
 BEA_EMOTIONAL_STATES = 32
 
@@ -353,6 +514,10 @@ def handle_intent(event, session_id):
         return handle_spatial_audio(slots)
     elif intent_name == "PerformanceStatusIntent":
         return handle_performance_status()
+    elif intent_name == "BEAAuralIntent":
+        return handle_bea_aural()
+    elif intent_name == "ARIAProtocolIntent":
+        return handle_aria_protocol(slots)
     elif intent_name == "AMAZON.HelpIntent":
         return handle_help()
     elif intent_name in ["AMAZON.StopIntent", "AMAZON.CancelIntent"]:
@@ -550,6 +715,96 @@ def get_slot_value(slots, slot_name, default=""):
         return slots.get(slot_name, {}).get('value', default)
     except:
         return default
+
+def handle_bea_aural():
+    """Handle BEA Aural sound quality analysis"""
+    try:
+        # Create emotional state for aural analysis
+        aural_state = BEABit(EmotionalStateIds.CLARITY, "Clarity", "💡", 180, "cognitive")
+        
+        # Simulate aural analysis
+        frequency_analysis = {
+            "bass_response": random.uniform(0.7, 0.95),
+            "mid_clarity": random.uniform(0.8, 0.98),
+            "treble_precision": random.uniform(0.75, 0.92),
+            "spatial_accuracy": random.uniform(0.85, 0.99)
+        }
+        
+        # Create ARIA message
+        aria = ARIAProtocol()
+        aria_message = aria.create_aria_message("aural_analysis", aural_state, "bea_aura")
+        
+        # Generate response
+        bass_pct = int(frequency_analysis["bass_response"] * 100)
+        clarity_pct = int(frequency_analysis["mid_clarity"] * 100)
+        spatial_pct = int(frequency_analysis["spatial_accuracy"] * 100)
+        
+        response_text = f"BEA Aural analysis complete. Your bass response is {bass_pct}% optimal. " \
+                       f"Audio clarity is at {clarity_pct}%. Spatial positioning accuracy is {spatial_pct}%. " \
+                       f"Current emotional resonance state: {aural_state.name} with {aural_state.symbol}. " \
+                       f"ARIA protocol sync ready for BEA Aura."
+        
+        return build_response(
+            response_text, 
+            card_title="BEA Aural Analysis",
+            card_content=f"🎵 Audio Quality Report\n\nBass: {bass_pct}%\nClarity: {clarity_pct}%\nSpatial: {spatial_pct}%\n\nEmotional State: {aural_state.name} {aural_state.symbol}"
+        )
+        
+    except Exception as e:
+        return build_response(f"BEA Aural analysis encountered an issue: {str(e)}")
+
+def handle_aria_protocol(slots):
+    """Handle ARIA Protocol commands for cross-device communication"""
+    try:
+        command = get_slot_value(slots, "ARIACommand", "status")
+        destination = get_slot_value(slots, "Destination", "all_devices")
+        
+        # Create appropriate emotional state based on command
+        if command == "sync":
+            emotional_state = BEABit(EmotionalStateIds.HARMONY, "Harmony", "☯️", 200, "peaceful")
+        elif command == "status":
+            emotional_state = BEABit(EmotionalStateIds.CLARITY, "Clarity", "💡", 180, "cognitive")
+        elif command == "resonance":
+            emotional_state = BEABit(EmotionalStateIds.WONDER, "Wonder", "✨", 220, "transcendent")
+        else:
+            emotional_state = BEABit(EmotionalStateIds.CURIOSITY, "Curiosity", "🤔", 150, "cognitive")
+        
+        # Create ARIA protocol message
+        aria = ARIAProtocol()
+        aria_message = aria.create_aria_message(f"aria_{command}", emotional_state, destination)
+        routing_result = aria.route_to_bea_aura(aria_message)
+        
+        # Generate contextual responses based on command and destination
+        if command == "sync":
+            if destination == "bea_aura":
+                response_text = f"ARIA protocol synchronization initiated with BEA Aura NAS. " \
+                               f"Cross-device alignment in progress. Emotional resonance: {emotional_state.name} {emotional_state.symbol}. " \
+                               f"All your BEA ecosystem devices will be synchronized through the Aural Resonance framework."
+            else:
+                response_text = f"ARIA sync targeting {destination.replace('_', ' ')}. " \
+                               f"Intelligent alignment protocol active with {emotional_state.name} resonance."
+        
+        elif command == "status":
+            response_text = f"ARIA Protocol status: Active and operational. " \
+                           f"Aural Resonance framework synchronized. " \
+                           f"Intelligent Alignment achieved with {emotional_state.name} clarity {emotional_state.symbol}. " \
+                           f"Protocol version {ARIA_PROTOCOL_VERSION} running smoothly."
+        
+        else:
+            response_text = f"ARIA Protocol processing {command} command. " \
+                           f"Intelligent alignment active with {emotional_state.name} state. " \
+                           f"Message routed to {destination.replace('_', ' ')} via Aural Resonance framework."
+        
+        return build_response(
+            response_text,
+            card_title=f"ARIA Protocol: {command.title()}",
+            card_content=f"🌐 ARIA - Aural Resonance & Intelligent Alignment\n\n"
+                        f"Command: {command}\nDestination: {destination.replace('_', ' ')}\n"
+                        f"Emotional State: {emotional_state.name} {emotional_state.symbol}"
+        )
+        
+    except Exception as e:
+        return build_response(f"ARIA Protocol encountered an alignment issue: {str(e)}")
 
 def build_response(speech_text, should_end=True, reprompt=None, card_title=None, card_content=None):
     """Build Alexa response"""

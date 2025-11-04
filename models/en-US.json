@@ -147,6 +147,10 @@
             {
               "name": "Distance",
               "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "Destination",
+              "type": "DestinationSlot"
             }
           ],
           "samples": [
@@ -164,7 +168,12 @@
             "position audio center",
             "create three d effect",
             "enable spatial audio",
-            "activate positional audio"
+            "activate positional audio",
+            "send audio to {Destination}",
+            "route sound to {Destination}",
+            "transfer audio to {Destination}",
+            "sync with {Destination}",
+            "connect to {Destination} device"
           ]
         },
         {
@@ -189,6 +198,12 @@
         },
         {
           "name": "TinyAIStatusIntent",
+          "slots": [
+            {
+              "name": "AICapability",
+              "type": "AICapabilitySlot"
+            }
+          ],
           "samples": [
             "tiny ai status",
             "check tiny ai",
@@ -203,7 +218,80 @@
             "tiny ai capabilities",
             "ai engine report",
             "micro ai status",
-            "edge ai report"
+            "edge ai report",
+            "check {AICapability} ai",
+            "tiny ai {AICapability} status",
+            "show {AICapability} capabilities",
+            "ai {AICapability} report",
+            "check tiny ai {AICapability}",
+            "beatbox ai performance",
+            "real time ai status",
+            "edge intelligence report"
+          ]
+        },
+        {
+          "name": "BEAAuralIntent",
+          "slots": [
+            {
+              "name": "AuralAnalysisType",
+              "type": "AuralAnalysisSlot"
+            }
+          ],
+          "samples": [
+            "bea aural status",
+            "check my aural quality",
+            "aural analysis",
+            "bea aural report",
+            "analyze my sound quality",
+            "aural intelligence check",
+            "check sound resonance",
+            "bea sound quality report",
+            "aural frequency analysis",
+            "check my audio aura",
+            "bea aural optimization",
+            "sound quality intelligence",
+            "aural enhancement status",
+            "check audio resonance",
+            "analyze my {AuralAnalysisType}",
+            "check aural {AuralAnalysisType}",
+            "bea aural {AuralAnalysisType} report",
+            "sound {AuralAnalysisType} analysis",
+            "audio {AuralAnalysisType} check"
+          ]
+        },
+        {
+          "name": "ARIAProtocolIntent",
+          "slots": [
+            {
+              "name": "ARIACommand",
+              "type": "ARIACommandSlot"
+            },
+            {
+              "name": "Destination",
+              "type": "DestinationSlot"
+            }
+          ],
+          "samples": [
+            "aria status",
+            "check aria",
+            "aria sync",
+            "aria protocol status",
+            "sync devices with aria",
+            "aria alignment check",
+            "check aural resonance",
+            "aria intelligence report",
+            "activate aria protocol",
+            "aria cross device sync",
+            "check intelligent alignment",
+            "aria emotional resonance",
+            "aria quality analysis",
+            "sync aria across devices",
+            "aria protocol sync",
+            "aria {ARIACommand} to {Destination}",
+            "sync aria with {Destination}",
+            "route aria to {Destination}",
+            "connect aria to {Destination}",
+            "aria protocol {ARIACommand}"
           ]
         },
         {
@@ -214,6 +302,60 @@
             "restore defaults",
             "reset to default",
             "clear all settings"
+          ]
+        },
+        {
+          "name": "BEACalculatorIntent",
+          "slots": [
+            {
+              "name": "MathOperation",
+              "type": "BEAMathOperationSlot"
+            },
+            {
+              "name": "EmotionalStateA",
+              "type": "EmotionalStateSlot"
+            },
+            {
+              "name": "EmotionalStateB",
+              "type": "EmotionalStateSlot"
+            }
+          ],
+          "samples": [
+            "bea calculator",
+            "calculate emotional states",
+            "combust {EmotionalStateA} and {EmotionalStateB}",
+            "balance {EmotionalStateA} with {EmotionalStateB}",
+            "dissolve {EmotionalStateA} into {EmotionalStateB}",
+            "amplify {EmotionalStateA} using {EmotionalStateB}",
+            "{MathOperation} {EmotionalStateA} and {EmotionalStateB}",
+            "calculate {MathOperation} operation",
+            "emotional math {MathOperation}",
+            "bea math {MathOperation}",
+            "perform {MathOperation} calculation",
+            "emotional state {MathOperation}"
+          ]
+        },
+        {
+          "name": "BEAFrameworkIntent",
+          "slots": [
+            {
+              "name": "FrameworkComponent",
+              "type": "BEAFrameworkSlot"
+            }
+          ],
+          "samples": [
+            "bea framework status",
+            "check bea framework",
+            "framework version",
+            "bea system status",
+            "show framework capabilities",
+            "bea {FrameworkComponent} status",
+            "check {FrameworkComponent} system",
+            "framework {FrameworkComponent} report",
+            "bea emotional intelligence",
+            "thirty two state system",
+            "emotional state grid",
+            "bea architecture status"
           ]
         }
       ],
@@ -274,6 +416,7 @@
         {
           "name": "EmotionalStateSlot",
           "values": [
+            {"name": {"value": "neutral", "synonyms": ["baseline", "default", "normal", "standard"]}},
             {"name": {"value": "curious", "synonyms": ["interested", "inquisitive", "wondering"]}},
             {"name": {"value": "calm", "synonyms": ["peaceful", "tranquil", "relaxed", "serene"]}},
             {"name": {"value": "excited", "synonyms": ["energetic", "enthusiastic", "pumped", "thrilled"]}},
@@ -301,7 +444,20 @@
             {"name": {"value": "tactical", "synonyms": ["strategic", "planned", "calculated", "methodical"]}},
             {"name": {"value": "precise", "synonyms": ["accurate", "exact", "meticulous", "detailed"]}},
             {"name": {"value": "dominant", "synonyms": ["controlling", "commanding", "powerful", "strong"]}},
-            {"name": {"value": "transcendent", "synonyms": ["elevated", "higher", "spiritual", "enlightened"]}}
+            {"name": {"value": "transcendent", "synonyms": ["elevated", "higher", "spiritual", "enlightened"]}},
+            {"name": {"value": "wonder", "synonyms": ["amazement", "awe", "marvel", "fascination"]}},
+            {"name": {"value": "bliss", "synonyms": ["ecstasy", "euphoria", "joy", "happiness"]}},
+            {"name": {"value": "enlightenment", "synonyms": ["wisdom", "insight", "understanding", "clarity"]}},
+            {"name": {"value": "inspiration", "synonyms": ["motivation", "creativity", "innovation", "vision"]}},
+            {"name": {"value": "harmony", "synonyms": ["balance", "unity", "peace", "equilibrium"]}},
+            {"name": {"value": "clarity", "synonyms": ["clear", "focused", "sharp", "precise"]}},
+            {"name": {"value": "relief", "synonyms": ["comfort", "ease", "relaxation", "release"]}},
+            {"name": {"value": "gratitude", "synonyms": ["thankfulness", "appreciation", "recognition", "acknowledgment"]}},
+            {"name": {"value": "hope", "synonyms": ["optimism", "faith", "expectation", "aspiration"]}},
+            {"name": {"value": "empathy", "synonyms": ["compassion", "understanding", "connection", "sympathy"]}},
+            {"name": {"value": "love", "synonyms": ["affection", "care", "devotion", "warmth"]}},
+            {"name": {"value": "valor", "synonyms": ["courage", "bravery", "heroism", "strength"]}},
+            {"name": {"value": "resolve", "synonyms": ["determination", "commitment", "perseverance", "dedication"]}}
           ]
         },
         {
@@ -328,6 +484,72 @@
             {"name": {"value": "above", "synonyms": ["up", "overhead", "top", "upward"]}},
             {"name": {"value": "below", "synonyms": ["down", "underneath", "bottom", "downward"]}},
             {"name": {"value": "center", "synonyms": ["middle", "central", "centered", "middle position"]}}
+          ]
+        },
+        {
+          "name": "ARIACommandSlot",
+          "values": [
+            {"name": {"value": "status", "synonyms": ["check", "report", "analysis"]}},
+            {"name": {"value": "sync", "synonyms": ["synchronize", "align", "coordinate"]}},
+            {"name": {"value": "resonance", "synonyms": ["frequency", "vibration", "harmony"]}},
+            {"name": {"value": "intelligence", "synonyms": ["smart", "adaptive", "learning"]}},
+            {"name": {"value": "protocol", "synonyms": ["system", "framework", "standard"]}}
+          ]
+        },
+        {
+          "name": "AuralAnalysisSlot",
+          "values": [
+            {"name": {"value": "quality", "synonyms": ["clarity", "fidelity", "precision"]}},
+            {"name": {"value": "frequency", "synonyms": ["pitch", "tone", "spectrum"]}},
+            {"name": {"value": "resonance", "synonyms": ["vibration", "harmony", "response"]}},
+            {"name": {"value": "optimization", "synonyms": ["enhancement", "improvement", "tuning"]}},
+            {"name": {"value": "intelligence", "synonyms": ["smart", "adaptive", "cognitive"]}}
+          ]
+        },
+        {
+          "name": "DestinationSlot",
+          "values": [
+            {"name": {"value": "bea aura", "synonyms": ["aura server", "nas", "storage hub", "data center"]}},
+            {"name": {"value": "lumin pi", "synonyms": ["lumin device", "raspberry pi", "edge device", "local device"]}},
+            {"name": {"value": "beatbox", "synonyms": ["bea beatbox", "beatbox system", "rhythm device"]}},
+            {"name": {"value": "speakerbox", "synonyms": ["bea speakerbox", "speaker system", "audio output"]}},
+            {"name": {"value": "gaming setup", "synonyms": ["gaming system", "game device", "tactical audio"]}},
+            {"name": {"value": "studio", "synonyms": ["recording studio", "professional audio", "production setup"]}},
+            {"name": {"value": "home theater", "synonyms": ["theater system", "surround sound", "entertainment center"]}},
+            {"name": {"value": "mobile device", "synonyms": ["phone", "tablet", "portable device", "mobile"]}},
+            {"name": {"value": "cloud", "synonyms": ["bea cloud", "cloud storage", "remote server", "online"]}},
+            {"name": {"value": "all devices", "synonyms": ["everywhere", "entire network", "all systems", "broadcast"]}}
+          ]
+        },
+        {
+          "name": "AICapabilitySlot",
+          "values": [
+            {"name": {"value": "beatbox", "synonyms": ["rhythm", "pattern", "sound"]}},
+            {"name": {"value": "recognition", "synonyms": ["detection", "analysis", "identification"]}},
+            {"name": {"value": "processing", "synonyms": ["computation", "calculation", "analysis"]}},
+            {"name": {"value": "edge", "synonyms": ["local", "real time", "instant"]}},
+            {"name": {"value": "performance", "synonyms": ["speed", "accuracy", "efficiency"]}},
+            {"name": {"value": "micro", "synonyms": ["tiny", "small", "compact"]}}
+          ]
+        },
+        {
+          "name": "BEAMathOperationSlot",
+          "values": [
+            {"name": {"value": "combust", "synonyms": ["fusion", "merge", "combine", "create"]}},
+            {"name": {"value": "balance", "synonyms": ["equilibrium", "harmony", "stabilize"]}},
+            {"name": {"value": "dissolve", "synonyms": ["breakdown", "decompose", "simplify"]}},
+            {"name": {"value": "amplify", "synonyms": ["enhance", "boost", "strengthen", "intensify"]}}
+          ]
+        },
+        {
+          "name": "BEAFrameworkSlot",
+          "values": [
+            {"name": {"value": "emotional", "synonyms": ["emotion", "feeling", "mood", "state"]}},
+            {"name": {"value": "intelligence", "synonyms": ["ai", "smart", "cognitive", "brain"]}},
+            {"name": {"value": "grid", "synonyms": ["matrix", "network", "system", "architecture"]}},
+            {"name": {"value": "calculator", "synonyms": ["math", "computation", "calculation", "processor"]}},
+            {"name": {"value": "thirty two state", "synonyms": ["32 state", "multi state", "complete system"]}},
+            {"name": {"value": "architecture", "synonyms": ["framework", "structure", "system", "platform"]}}
           ]
         }
       ]
