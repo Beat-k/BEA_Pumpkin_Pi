@@ -4,6 +4,9 @@
 [![Python](https://img.shields.io/badge/python-3.8+-green.svg)](https://python.org)
 [![Alexa](https://img.shields.io/badge/platform-Amazon%20Alexa-orange.svg)](https://developer.amazon.com/alexa)
 [![BEA Ecosystem](https://img.shields.io/badge/BEA-Ecosystem-purple.svg)](https://github.com/Beat-k)
+[![GitHub stars](https://img.shields.io/github/stars/Beat-k/BEA_Pumpkin_Pi?style=social)](https://github.com/Beat-k/BEA_Pumpkin_Pi/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Beat-k/BEA_Pumpkin_Pi?style=social)](https://github.com/Beat-k/BEA_Pumpkin_Pi/network)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Revolutionary 4D Audio & Beatbox Recognition Platform for Amazon Echo Dot**
 
@@ -253,10 +256,18 @@ def handle_beatbox_recognition(handler_input):
 git clone https://github.com/Beat-k/BEA_Pumpkin_Pi.git
 cd BEA_Pumpkin_Pi
 
-# Install dependencies
-pip install -r requirements.txt
+# Check deployment readiness
+./check-deployment-ready.ps1  # Windows
+# or
+chmod +x check-deployment-ready.ps1 && ./check-deployment-ready.ps1
 
-# Deploy to Alexa Skills Kit
+# Follow setup guides
+# 1. ACCOUNT_SETUP_GUIDE.md - Create AWS & Amazon accounts
+# 2. Configure AWS CLI: aws configure
+# 3. Configure ASK CLI: ask configure
+
+# Install dependencies and deploy
+pip install -r lambda/requirements.txt
 ask deploy
 
 # Test the skill
@@ -397,7 +408,9 @@ We welcome contributions that enhance the BEA ecosystem integration:
 - 🐛 **Bug Reports**: [GitHub Issues](https://github.com/Beat-k/BEA_Pumpkin_Pi/issues)
 - 💡 **Feature Requests**: [GitHub Discussions](https://github.com/Beat-k/BEA_Pumpkin_Pi/discussions)
 - 📧 **Email**: jeremyjackson7@proton.me
-- 📖 **Documentation**: [Skill Documentation](https://developer.amazon.com/docs/custom-skills)
+- 📖 **Documentation**: [Complete Setup Guide](./ACCOUNT_SETUP_GUIDE.md) | [Deployment Guide](./DEPLOYMENT_GUIDE.md)
+- 🚀 **Quick Start**: [Deployment Readiness Check](./check-deployment-ready.ps1)
+- 🤝 **Contributing**: [Contribution Guidelines](./CONTRIBUTING.md)
 
 ---
 
