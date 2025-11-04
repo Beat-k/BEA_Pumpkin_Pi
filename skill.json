@@ -77,8 +77,8 @@
       "containsAds": false,
       "locales": {
         "en-US": {
-          "termsOfUseUrl": "https://your-terms-url.com",
-          "privacyPolicyUrl": "https://your-privacy-url.com"
+          "termsOfUseUrl": "https://github.com/Beat-k/BEA_Pumpkin_Pi#license--commercial-use",
+          "privacyPolicyUrl": "https://github.com/Beat-k/BEA_Pumpkin_Pi#privacy--security"
         }
       }
     }
