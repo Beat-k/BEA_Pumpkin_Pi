@@ -1,0 +1,22 @@
+{
+  "deploy_settings": {
+    "default": {
+      "skill_infrastructure": {
+        "userConfig": {
+          "runtime": "python3.9",
+          "handler": "minimal_lambda.lambda_handler",
+          "awsRegion": "us-east-1"
+        }
+      },
+      "skill_id": "",
+      "was_cloned": false,
+      "merge": {}
+    }
+  },
+  "profiles": {
+    "default": {
+      "aws_profile": "default",
+      "aws_region": "us-east-1"
+    }
+  }
+}

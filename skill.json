@@ -20,9 +20,7 @@
             "emotional intelligence"
           ],
           "name": "BEA Pumpkin Pi",
-          "description": "Revolutionary 4D Audio Processing & Beatbox Recognition Platform for Amazon Echo Dot. Features emotional intelligence, spatial audio enhancement, gaming optimization, and advanced beatbox recognition inspired by the BEA Ecosystem. Transform your Echo Dot into a 4D audio powerhouse with cognitive enhancement capabilities.",
-          "largeIconUri": "https://your-skill-icon-bucket.s3.amazonaws.com/large-icon.png",
-          "smallIconUri": "https://your-skill-icon-bucket.s3.amazonaws.com/small-icon.png"
+          "description": "Revolutionary 4D Audio Processing & Beatbox Recognition Platform for Amazon Echo Dot. Features emotional intelligence, spatial audio enhancement, gaming optimization, and advanced beatbox recognition inspired by the BEA Ecosystem. Transform your Echo Dot into a 4D audio powerhouse with cognitive enhancement capabilities."
         }
       },
       "isAvailableWorldwide": true,
@@ -33,22 +31,7 @@
     "apis": {
       "custom": {
         "endpoint": {
-          "sourceDir": "lambda",
-          "uri": "ask-bea-pumpkin-pi-default"
-        },
-        "regions": {
-          "NA": {
-            "endpoint": {
-              "sourceDir": "lambda",
-              "uri": "ask-bea-pumpkin-pi-default"
-            }
-          },
-          "EU": {
-            "endpoint": {
-              "sourceDir": "lambda", 
-              "uri": "ask-bea-pumpkin-pi-default"
-            }
-          }
+          "uri": "arn:aws:lambda:us-east-1:017190387766:function:BEA-Pumpkin-Pi-Skill"
         },
         "interfaces": [
           {
