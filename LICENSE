@@ -1,0 +1,104 @@
+MIT License
+
+Copyright (c) 2025 Jeremy F. Jackson dba BEATEK
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+
+ADDITIONAL TERMS FOR BEA ECOSYSTEM INTEGRATION
+==============================================
+
+This software is part of the BEA (BEATEK) Ecosystem and integrates with 
+proprietary BEA technologies including:
+
+- BEA 4D Audio Architecture
+- BEA Emotional Intelligence Framework (32-state system)
+- BEA TinyAI Edge Processing Technology
+- BEA Spatial Audio Processing Engine
+
+COMMERCIAL LICENSING NOTICE:
+---------------------------
+
+While this Amazon Alexa skill implementation is provided under the MIT License
+for personal, academic, and non-commercial use, commercial applications may
+require additional licensing for BEA ecosystem components.
+
+For commercial use including but not limited to:
+- Integration into commercial products or services
+- Enterprise deployment and distribution
+- OEM integration and volume licensing
+- Revenue-generating applications
+
+Please contact:
+Email: jeremyjackson7@proton.me
+Subject: "BEA Pumpkin Pi Commercial License"
+
+TRADEMARK NOTICE:
+----------------
+
+"BEA Pumpkin Pi" is a trademark of Jeremy F. Jackson dba BEATEK.
+"BEA", "BEATEK", and related marks are trademarks of Jeremy F. Jackson dba BEATEK.
+
+Amazon Alexa and Echo are trademarks of Amazon.com, Inc.
+
+All other trademarks are property of their respective owners.
+
+================================================================================
+
+ATTRIBUTION REQUIREMENTS:
+=========================
+
+When using this software, you must include attribution to:
+
+1. The BEA Ecosystem and Jeremy F. Jackson dba BEATEK
+2. The original BEA_Beatbox and BEA_Speakerbox projects that inspired this work
+3. This license file in any distribution
+
+Example attribution:
+"Powered by BEA Pumpkin Pi™ - Part of the BEA Ecosystem by Jeremy F. Jackson dba BEATEK"
+
+================================================================================
+
+TECHNICAL DISCLAIMERS:
+=====================
+
+1. Amazon Alexa Integration:
+   This software requires Amazon Alexa Skills Kit and AWS Lambda services.
+   Amazon's terms of service and privacy policies apply to Alexa integration.
+
+2. Performance Requirements:
+   Real-time audio processing performance depends on network connectivity,
+   AWS Lambda cold starts, and Echo device capabilities.
+
+3. BEA Technology Dependencies:
+   Some features require proprietary BEA algorithms. Commercial use may
+   require separate licensing for full functionality.
+
+4. Audio Processing:
+   Audio enhancement results may vary based on source material, device
+   limitations, and processing constraints.
+
+================================================================================
+
+For questions about licensing, commercial use, or technical support:
+Email: jeremyjackson7@proton.me
+GitHub: https://github.com/Beat-k/BEA_Pumpkin_Pi
+
+© 2025 Jeremy F. Jackson dba BEATEK. All Rights Reserved.

@@ -1,0 +1,358 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "pumpkin pi",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "LaunchIntent",
+          "samples": [
+            "start",
+            "begin",
+            "activate",
+            "turn on",
+            "wake up"
+          ]
+        },
+        {
+          "name": "AudioEnhancementIntent",
+          "slots": [
+            {
+              "name": "EnhancementType",
+              "type": "EnhancementTypeSlot"
+            },
+            {
+              "name": "IntensityLevel", 
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "enhance my audio",
+            "improve the sound",
+            "boost audio quality",
+            "activate {EnhancementType} enhancement",
+            "set enhancement to {IntensityLevel}",
+            "enhance audio with {EnhancementType}",
+            "turn on 4d audio",
+            "activate spatial audio",
+            "improve background sounds",
+            "enhance foreground audio"
+          ]
+        },
+        {
+          "name": "BeatboxRecognitionIntent",
+          "slots": [
+            {
+              "name": "BeatboxStyle",
+              "type": "BeatboxStyleSlot"
+            }
+          ],
+          "samples": [
+            "recognize beatbox",
+            "start beatbox mode",
+            "listen for beatbox",
+            "detect {BeatboxStyle} beatbox",
+            "analyze my beatbox",
+            "recognize {BeatboxStyle} sounds",
+            "start beatbox recognition",
+            "listen to my beats"
+          ]
+        },
+        {
+          "name": "EmotionalStateIntent",
+          "slots": [
+            {
+              "name": "EmotionalState",
+              "type": "EmotionalStateSlot"
+            }
+          ],
+          "samples": [
+            "set emotion to {EmotionalState}",
+            "I'm feeling {EmotionalState}",
+            "change mood to {EmotionalState}",
+            "set emotional state {EmotionalState}",
+            "adjust for {EmotionalState}",
+            "optimize for {EmotionalState} mood"
+          ]
+        },
+        {
+          "name": "GamingModeIntent",
+          "slots": [
+            {
+              "name": "GameType",
+              "type": "GameTypeSlot"
+            }
+          ],
+          "samples": [
+            "start gaming mode",
+            "enable game audio",
+            "optimize for {GameType}",
+            "activate tactical audio",
+            "enhance gaming sounds",
+            "turn on competitive mode",
+            "start {GameType} optimization"
+          ]
+        },
+        {
+          "name": "SpatialAudioIntent",
+          "slots": [
+            {
+              "name": "Direction",
+              "type": "DirectionSlot"
+            },
+            {
+              "name": "Distance",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "place sound {Direction}",
+            "move audio {Direction}",
+            "set position {Direction}",
+            "place sound {Distance} meters {Direction}",
+            "create spatial effect",
+            "enable 4d positioning"
+          ]
+        },
+        {
+          "name": "PerformanceStatusIntent",
+          "samples": [
+            "check performance",
+            "show status",
+            "what's my audio quality",
+            "performance report",
+            "system status",
+            "how is the enhancement working"
+          ]
+        },
+        {
+          "name": "ResetSettingsIntent",
+          "samples": [
+            "reset settings",
+            "clear preferences",
+            "restore defaults",
+            "reset to default",
+            "clear all settings"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "name": "EnhancementTypeSlot",
+          "values": [
+            {
+              "name": {
+                "value": "spatial"
+              }
+            },
+            {
+              "name": {
+                "value": "4d"
+              }
+            },
+            {
+              "name": {
+                "value": "background"
+              }
+            },
+            {
+              "name": {
+                "value": "foreground"
+              }
+            },
+            {
+              "name": {
+                "value": "gaming"
+              }
+            },
+            {
+              "name": {
+                "value": "emotional"
+              }
+            },
+            {
+              "name": {
+                "value": "cognitive"
+              }
+            }
+          ]
+        },
+        {
+          "name": "BeatboxStyleSlot",
+          "values": [
+            {
+              "name": {
+                "value": "classic"
+              }
+            },
+            {
+              "name": {
+                "value": "modern"
+              }
+            },
+            {
+              "name": {
+                "value": "bass"
+              }
+            },
+            {
+              "name": {
+                "value": "snare"
+              }
+            },
+            {
+              "name": {
+                "value": "vocal"
+              }
+            },
+            {
+              "name": {
+                "value": "techno"
+              }
+            },
+            {
+              "name": {
+                "value": "freestyle"
+              }
+            }
+          ]
+        },
+        {
+          "name": "EmotionalStateSlot",
+          "values": [
+            {
+              "name": {
+                "value": "curious"
+              }
+            },
+            {
+              "name": {
+                "value": "calm"
+              }
+            },
+            {
+              "name": {
+                "value": "excited"
+              }
+            },
+            {
+              "name": {
+                "value": "focused"
+              }
+            },
+            {
+              "name": {
+                "value": "energetic"
+              }
+            },
+            {
+              "name": {
+                "value": "relaxed"
+              }
+            },
+            {
+              "name": {
+                "value": "creative"
+              }
+            },
+            {
+              "name": {
+                "value": "competitive"
+              }
+            }
+          ]
+        },
+        {
+          "name": "GameTypeSlot", 
+          "values": [
+            {
+              "name": {
+                "value": "fps"
+              }
+            },
+            {
+              "name": {
+                "value": "fighting"
+              }
+            },
+            {
+              "name": {
+                "value": "racing"
+              }
+            },
+            {
+              "name": {
+                "value": "strategy"
+              }
+            },
+            {
+              "name": {
+                "value": "tactical"
+              }
+            },
+            {
+              "name": {
+                "value": "competitive"
+              }
+            }
+          ]
+        },
+        {
+          "name": "DirectionSlot",
+          "values": [
+            {
+              "name": {
+                "value": "left"
+              }
+            },
+            {
+              "name": {
+                "value": "right"
+              }
+            },
+            {
+              "name": {
+                "value": "front"
+              }
+            },
+            {
+              "name": {
+                "value": "back"
+              }
+            },
+            {
+              "name": {
+                "value": "above"
+              }
+            },
+            {
+              "name": {
+                "value": "below"
+              }
+            },
+            {
+              "name": {
+                "value": "center"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

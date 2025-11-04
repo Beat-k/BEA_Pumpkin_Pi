@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../BEA_Beatbox"
+		},
+		{
+			"path": "../BEA_Speakerbox"
+		}
+	],
+	"settings": {}
+}
