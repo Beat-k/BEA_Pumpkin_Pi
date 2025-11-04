@@ -17,32 +17,9 @@ import json
 import random
 import time
 import math
-try:
-    import numpy as np
-    NUMPY_AVAILABLE = True
-except ImportError:
-    NUMPY_AVAILABLE = False
-    # Create mock numpy for deployment environments without numpy
-    class MockNumPy:
-        @staticmethod
-        def sin(x): return math.sin(float(x) if hasattr(x, '__iter__') and len(x) > 0 else x)
-        @staticmethod 
-        def pi(): return math.pi
-        @staticmethod
-        def linspace(start, stop, num): return [start + (stop-start)*i/(num-1) for i in range(num)]
-        @staticmethod
-        def exp(x): return math.exp(float(x) if hasattr(x, '__iter__') and len(x) > 0 else x)
-        @staticmethod
-        def random():
-            class MockRandom:
-                @staticmethod
-                def randn(size): return [random.gauss(0, 1) for _ in range(size)]
-            return MockRandom()
-        @staticmethod
-        def mean(data): return sum(data) / len(data) if data else 0
-        @staticmethod
-        def sqrt(x): return math.sqrt(x)
-    np = MockNumPy()
+
+# No numpy import - use pure Python for AWS Lambda compatibility
+NUMPY_AVAILABLE = False
 
 from typing import Dict, Any, Optional
 from datetime import datetime, timezone
@@ -340,15 +317,19 @@ class BEAEngine:
         # Use simplified TinyAI
         self.tiny_beatbox.start_recognition(style)
         
-        # Create mock audio data
-        if NUMPY_AVAILABLE:
-            duration = 2.0
-            samples = int(16000 * duration)
-            t = np.linspace(0, duration, samples)
-            test_audio = 0.7 * np.sin(2 * np.pi * 80 * t) * np.exp(-3*t)
-            test_audio += 0.1 * np.random.randn(samples)
-        else:
-            test_audio = [random.gauss(0, 0.5) for _ in range(1000)]
+        # Create mock audio data - Pure Python implementation for AWS Lambda
+        duration = 2.0
+        samples = int(16000 * duration)
+        
+        # Generate simple test audio without numpy
+        test_audio = []
+        for i in range(min(samples, 1000)):  # Limit samples for Lambda performance
+            t = i / 16000.0  # Time in seconds
+            # Simple sine wave with decay
+            sine_val = 0.7 * math.sin(2 * math.pi * 80 * t) * math.exp(-3 * t)
+            # Add some noise
+            noise = 0.1 * random.gauss(0, 1)
+            test_audio.append(sine_val + noise)
         
         result = self.tiny_beatbox.recognize_beatbox(test_audio)
         processing_time = (time.time() - start_time) * 1000
@@ -518,6 +499,10 @@ def handle_intent(event, session_id):
         return handle_bea_aural()
     elif intent_name == "ARIAProtocolIntent":
         return handle_aria_protocol(slots)
+    elif intent_name == "BEACalculatorIntent":
+        return handle_bea_calculator(slots)
+    elif intent_name == "BEAFrameworkIntent":
+        return handle_bea_framework(slots)
     elif intent_name == "AMAZON.HelpIntent":
         return handle_help()
     elif intent_name in ["AMAZON.StopIntent", "AMAZON.CancelIntent"]:
@@ -526,6 +511,104 @@ def handle_intent(event, session_id):
         return handle_fallback()
     else:
         return build_response("I'm not sure how to help with that. Try asking for tiny ai status or audio enhancement.")
+
+def handle_bea_calculator(slots):
+    """Handle BEA Calculator mathematical operations"""
+    try:
+        operation = get_slot_value(slots, "MathOperation", "combust")
+        state_a_name = get_slot_value(slots, "EmotionalStateA", "curious")
+        state_b_name = get_slot_value(slots, "EmotionalStateB", "calm")
+        
+        # Create BEABit states for the operation
+        state_a = BEABit(EmotionalStateIds.CURIOSITY, state_a_name.title(), "🤔", 150, "cognitive")
+        state_b = BEABit(EmotionalStateIds.CALMNESS, state_b_name.title(), "😌", 120, "peaceful")
+        
+        # Perform the mathematical operation
+        if operation == "combust":
+            result_state = BEACalculator.combust(state_a, state_b)
+            operation_symbol = "⊕"
+        elif operation == "balance":
+            result_state = BEACalculator.balance(state_a, state_b)
+            operation_symbol = "⊖"
+        elif operation == "dissolve":
+            result_state = BEACalculator.dissolve(state_a, state_b)
+            operation_symbol = "⊗"
+        elif operation == "amplify":
+            result_state = BEACalculator.amplify(state_a, state_b)
+            operation_symbol = "⨀"
+        else:
+            result_state = BEACalculator.combust(state_a, state_b)
+            operation_symbol = "⊕"
+        
+        response_text = f"BEA Calculator performing {operation} operation {operation_symbol}. " \
+                       f"Processing {state_a_name} and {state_b_name}. " \
+                       f"Result: {result_state.name} {result_state.symbol} with intensity {result_state.level}. " \
+                       f"The BEA mathematical framework has created emergent emotional properties through " \
+                       f"sophisticated state mathematics."
+        
+        return build_response(
+            response_text,
+            card_title=f"BEA Calculator: {operation.title()} {operation_symbol}",
+            card_content=f"🧮 BEA Mathematical Operation\n\n"
+                        f"Operation: {operation.title()} {operation_symbol}\n"
+                        f"Inputs: {state_a_name.title()} + {state_b_name.title()}\n"
+                        f"Result: {result_state.name} {result_state.symbol}\n"
+                        f"Intensity: {result_state.level}/255"
+        )
+        
+    except Exception as e:
+        return build_response(f"BEA Calculator encountered a mathematical complexity: {str(e)}")
+
+def handle_bea_framework(slots):
+    """Handle BEA Framework status and component queries"""
+    try:
+        component = get_slot_value(slots, "FrameworkComponent", "emotional")
+        
+        if component == "emotional":
+            response_text = f"BEA Framework Emotional Intelligence system active. " \
+                           f"Currently running 32-state emotional architecture with " \
+                           f"complete cognitive, peaceful, energetic, and transcendent categories. " \
+                           f"Emotional processing includes curiosity, calmness, excitement, wonder, " \
+                           f"and 28 additional sophisticated states for comprehensive intelligence."
+                           
+        elif component == "intelligence":
+            response_text = f"BEA Intelligence Architecture operational. " \
+                           f"Advanced AI framework integrating TinyAI with emotional mathematics. " \
+                           f"Real-time processing includes pattern recognition, state calculations, " \
+                           f"and cross-device synchronization via ARIA Protocol."
+                           
+        elif component == "grid":
+            response_text = f"BEA Emotional Grid system active. " \
+                           f"32x32 cellular automata architecture processing emotional states " \
+                           f"with mathematical operations: combust, balance, dissolve, and amplify. " \
+                           f"Grid enables complex emotional intelligence beyond simple responses."
+                           
+        elif component == "calculator":
+            response_text = f"BEA Calculator system operational. " \
+                           f"Mathematical framework supports four core operations: " \
+                           f"Combust creates emergent properties, Balance seeks equilibrium, " \
+                           f"Dissolve simplifies complexity, Amplify enhances from baseline. " \
+                           f"Advanced emotional mathematics ready for processing."
+                           
+        else:
+            response_text = f"BEA Framework version {BEA_VERSION} fully operational. " \
+                           f"Complete 32-state emotional intelligence system with " \
+                           f"TinyAI integration, ARIA Protocol communication, " \
+                           f"mathematical operations, and advanced grid processing. " \
+                           f"Framework represents revolutionary approach to emotional AI."
+        
+        return build_response(
+            response_text,
+            card_title=f"BEA Framework: {component.title()}",
+            card_content=f"🧠 BEA Framework v{BEA_VERSION}\n\n"
+                        f"Component: {component.title()}\n"
+                        f"Status: Operational\n"
+                        f"Emotional States: 32\n"
+                        f"ARIA Protocol: v{ARIA_PROTOCOL_VERSION}"
+        )
+        
+    except Exception as e:
+        return build_response(f"BEA Framework encountered a system query issue: {str(e)}")
 
 def handle_audio_enhancement(slots):
     """Handle audio enhancement"""
