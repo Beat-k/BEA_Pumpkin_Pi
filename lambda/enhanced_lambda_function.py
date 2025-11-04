@@ -639,6 +639,7 @@ def handle_enhanced_intent(event: Dict[str, Any], session_id: str) -> Dict[str, 
         "AMAZON.HelpIntent": handle_enhanced_help,
         "AMAZON.StopIntent": handle_enhanced_stop,
         "AMAZON.CancelIntent": handle_enhanced_stop,
+        "AMAZON.FallbackIntent": handle_enhanced_fallback,
         "AMAZON.NavigateHomeIntent": handle_enhanced_launch
     }
     
@@ -1038,6 +1039,30 @@ def handle_enhanced_stop(slots: Dict[str, Any], session_id: str) -> Dict[str, An
         should_end_session=True,
         card_title="BEA Pumpkin Pi Session Complete",
         card_content=f"{commands_processed} Commands • {session_duration:.0f}s Duration • Thank You!"
+    )
+
+def handle_enhanced_fallback(slots: Dict[str, Any], session_id: str) -> Dict[str, Any]:
+    """Enhanced fallback handling with suggestions"""
+    session_info = bea_engine.session_data.get(session_id, {})
+    commands_processed = session_info.get("commands_processed", 0)
+    
+    speech_text = (
+        f"I didn't quite understand that command. BEA Pumpkin Pi version {BEA_VERSION} with TinyAI offers "
+        f"advanced audio processing and real-time beatbox recognition. "
+        f"You've processed {commands_processed} commands this session. "
+        f"Try saying 'tiny ai status' for AI capabilities, "
+        f"'start beatbox mode' for real-time analysis, "
+        f"'enhance my audio' for 4D spatial processing, "
+        f"'set emotion to focused' for emotional intelligence, "
+        f"or 'help' for comprehensive options. What would you like to experience?"
+    )
+    
+    return build_enhanced_response(
+        speech_text,
+        should_end_session=False,
+        reprompt="What audio enhancement or TinyAI feature would you like to try?",
+        card_title="BEA Pumpkin Pi - Available Features",
+        card_content="TinyAI • 4D Audio • Beatbox Recognition • Emotional Intelligence • Gaming Enhancement"
     )
 
 def handle_enhanced_reset_settings(slots: Dict[str, Any], session_id: str) -> Dict[str, Any]:

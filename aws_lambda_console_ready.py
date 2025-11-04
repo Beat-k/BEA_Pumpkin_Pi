@@ -357,6 +357,8 @@ def handle_intent(event, session_id):
         return handle_help()
     elif intent_name in ["AMAZON.StopIntent", "AMAZON.CancelIntent"]:
         return handle_stop()
+    elif intent_name == "AMAZON.FallbackIntent":
+        return handle_fallback()
     else:
         return build_response("I'm not sure how to help with that. Try asking for tiny ai status or audio enhancement.")
 
@@ -517,6 +519,24 @@ def handle_help():
 def handle_stop():
     """Handle stop/cancel requests"""
     return build_response("Thank you for using BEA Pumpkin Pi with TinyAI. Stay tuned for amazing audio experiences!")
+
+def handle_fallback():
+    """Handle fallback intent when Alexa doesn't understand the request"""
+    speech_text = (
+        "I didn't quite understand that. BEA Pumpkin Pi with TinyAI offers advanced audio processing. "
+        "Try saying 'tiny ai status' to check AI capabilities, "
+        "'start beatbox mode' for real-time analysis, "
+        "'enhance my audio' for 4D processing, "
+        "or 'help' for more options. What would you like to try?"
+    )
+    
+    return build_response(
+        speech_text,
+        should_end=False,
+        reprompt="What audio enhancement would you like to experience?",
+        card_title="BEA Pumpkin Pi - Available Commands",
+        card_content="TinyAI • Audio Enhancement • Beatbox Recognition • Emotional Intelligence"
+    )
 
 def handle_session_end(session_id):
     """Handle session end"""
