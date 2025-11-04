@@ -78,6 +78,11 @@ bea_session_*.json
 user_profiles_*.json
 gaming_sessions_*.json
 
+# Lambda deployment artifacts
+lambda-package/
+*.zip
+bea-pumpkin-pi-lambda.zip
+
 # Testing
 .coverage
 .pytest_cache/
