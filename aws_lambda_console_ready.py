@@ -1,9 +1,12 @@
 """
-🎤 BEA Pumpkin Pi with TinyAI - AWS Lambda Console Ready Code
-===========================================================
+� BEA Pumpkin Pi Educational - AWS Lambda Console Ready Code
+============================================================
 
 COPY THIS ENTIRE FILE INTO AWS LAMBDA CONSOLE
 Replace the default lambda_function.py with this code.
+
+EDUCATIONAL PURPOSE ONLY - Teaches audio concepts through conversation
+Does NOT process or enhance actual audio hardware
 
 Handler: lambda_function.lambda_handler
 Runtime: Python 3.9
@@ -187,76 +190,71 @@ class ARIAProtocol:
             "message_id": f"aria_{int(time.time())}"
         }
 
-BEA_ENGINE_STATUS = "ACTIVE_WITH_TINY_AI"
+BEA_ENGINE_STATUS = "EDUCATIONAL_CONTENT_ACTIVE"
 BEA_EMOTIONAL_STATES = 32
 
-# TinyAI Mock for AWS Lambda (simplified for deployment)
-class SimplifiedTinyAI:
-    """Simplified TinyAI for AWS Lambda deployment"""
+# Educational Content Simulator (No Real Audio Processing)
+class AudioEducationSimulator:
+    """Educational audio concept simulator - NO REAL PROCESSING"""
     
     def __init__(self):
-        self.is_listening = False
-        self.sample_rate = 16000
-        self.recognition_count = 0
-        self.confidence_history = []
+        self.learning_session_active = False
+        self.concepts_taught = 0
+        self.learning_history = []
         
-    def start_recognition(self, style="freestyle"):
-        self.is_listening = True
+    def start_audio_lesson(self, concept="frequency"):
+        self.learning_session_active = True
         return True
         
-    def recognize_beatbox(self, audio_data):
-        """Simplified beatbox recognition for AWS Lambda"""
-        self.recognition_count += 1
+    def teach_audio_concept(self, concept_data):
+        """Educational concept explanation - NO AUDIO ANALYSIS"""
+        self.concepts_taught += 1
         
-        # Simulate realistic TinyAI performance
-        confidence = random.uniform(0.4, 0.6)
-        self.confidence_history.append(confidence)
+        # Generate educational content based on concept
+        educational_content = {
+            "frequency": "Frequency is measured in hertz and determines pitch",
+            "amplitude": "Amplitude affects volume and is measured in decibels", 
+            "spatial_audio": "Spatial audio creates the illusion of 3D sound positioning",
+            "beatboxing": "Beatboxing uses vocal techniques to create rhythm patterns"
+        }
         
-        # Keep only last 10 results
-        if len(self.confidence_history) > 10:
-            self.confidence_history = self.confidence_history[-10:]
+        lesson = educational_content.get(concept_data, "Audio concepts help us understand sound")
+        self.learning_history.append(lesson)
         
-        # Mock result structure
-        class MockResult:
+        # Keep only last 10 lessons
+        if len(self.learning_history) > 10:
+            self.learning_history = self.learning_history[-10:]
+        
+        # Mock educational result structure
+        class EducationalResult:
             def __init__(self):
-                self.overall_confidence = confidence
-                self.processing_time_ms = random.uniform(3, 50)
-                self.bpm_detected = random.randint(80, 180)
-                self.quality_score = 0.6
-                self.patterns = [MockPattern()]
-                self.enhancement_suggestions = ["Try to make your beats more distinct and pronounced"]
-                self.primary_style = MockStyle()
+                self.lesson_content = lesson
+                self.engagement_score = random.uniform(0.7, 0.95)
+                self.comprehension_level = random.randint(70, 95)
+                self.concepts_learned = ["basic understanding", "practical application"]
+                self.next_suggestions = ["Try learning about related audio concepts"]
         
-        class MockPattern:
-            def __init__(self):
-                self.pattern_type = "kick"
-                self.confidence = confidence
-                
-        class MockStyle:
-            def __init__(self):
-                self.value = "modern"
-        
-        return MockResult()
+        return EducationalResult()
     
-    def get_performance_report(self):
-        avg_confidence = sum(self.confidence_history) / len(self.confidence_history) if self.confidence_history else 0
+    def get_learning_progress(self):
+        avg_engagement = 0.85  # Educational content is engaging
         return {
-            "recognition_metrics": {
-                "total_recognitions": self.recognition_count,
-                "average_confidence": avg_confidence,
-                "average_processing_time": 7.0,
-                "pattern_distribution": {}
+            "learning_metrics": {
+                "total_concepts_taught": self.concepts_taught,
+                "average_engagement": avg_engagement,
+                "lesson_duration": "5-10 minutes per concept",
+                "comprehension_tracking": {}
             },
-            "recent_results": [],
-            "system_status": {
-                "is_listening": self.is_listening,
-                "sample_rate": self.sample_rate,
-                "buffer_size": len(self.confidence_history)
+            "recent_lessons": self.learning_history,
+            "education_status": {
+                "session_active": self.learning_session_active,
+                "concepts_available": ["frequency", "amplitude", "spatial audio", "beatboxing"],
+                "progress_saved": len(self.learning_history)
             }
         }
 
-class BEAEngine:
-    """BEA Audio Processing Engine for AWS Lambda"""
+class BEAEducationalEngine:
+    """BEA Educational Content Engine - Teaches Audio Concepts Only"""
     
     def __init__(self):
         self.session_data = {}
@@ -274,9 +272,11 @@ class BEAEngine:
             }
         }
         
-        # Initialize simplified TinyAI
-        self.tiny_beatbox = SimplifiedTinyAI()
-        self.tiny_ai_status = "READY"
+        # Initialize educational content simulator
+        self.audio_educator = AudioEducationSimulator()
+        self.education_status = "active"
+        self.current_emotion = "curious"
+        self.learning_sessions = 1
         self.processing_history = []
     
     def initialize_session(self, session_id: str):
@@ -287,71 +287,59 @@ class BEAEngine:
         }
         return True
     
-    def process_audio_enhancement(self, enhancement_type: str, intensity: int = 3):
-        """Process audio enhancement"""
+    def teach_audio_enhancement(self, enhancement_type: str, intensity: int = 3):
+        """Teach audio enhancement concepts - NO ACTUAL PROCESSING"""
         start_time = time.time()
         
-        # Simulate audio processing
-        improvements = [
-            f"{enhancement_type.title()} enhancement active at level {intensity}",
-            f"Processing optimized with {intensity}x improvement factor",
-            f"Audio quality enhanced by {intensity * 25}% with real-time processing"
-        ]
+        # Educational content about audio concepts
+        educational_explanations = {
+            "spatial": f"Spatial audio creates the illusion of 3D sound by using timing and volume differences between speakers. At level {intensity}, this would theoretically provide wider soundstage.",
+            "frequency": f"Frequency enhancement would boost specific Hz ranges. Level {intensity} would emphasize {intensity * 1000}Hz range for clarity.",
+            "amplitude": f"Amplitude control affects volume levels. Level {intensity} represents a {intensity * 6}dB theoretical boost."
+        }
+        
+        explanation = educational_explanations.get(enhancement_type, f"Audio enhancement involves digital signal processing to modify sound characteristics.")
         
         processing_time = (time.time() - start_time) * 1000
-        self.audio_state["performance_metrics"]["latency"] = processing_time
         
         return {
             "success": True,
             "enhancement_type": enhancement_type,
             "intensity": intensity,
             "processing_time_ms": round(processing_time, 2),
-            "audio_improvements": improvements,
-            "technical_details": {"algorithm": f"BEA {enhancement_type.title()} Matrix"}
+            "educational_content": explanation,
+            "learning_note": "This is educational content - no actual audio processing occurs"
         }
     
-    def process_beatbox_recognition(self, style: str = "freestyle"):
-        """Process beatbox recognition with TinyAI"""
+    def teach_beatbox_concepts(self, style: str = "freestyle"):
+        """Teach beatboxing concepts - NO AUDIO ANALYSIS"""
         start_time = time.time()
         
-        # Use simplified TinyAI
-        self.tiny_beatbox.start_recognition(style)
+        # Educational content about beatbox techniques
+        beatbox_lessons = {
+            "freestyle": "Freestyle beatboxing combines basic sounds creatively. Start with kick (B), snare (K), and hi-hat (ts) sounds.",
+            "classic": "Classic beatboxing uses traditional hip-hop patterns. Focus on boom-bap rhythms with strong kick-snare alternation.",
+            "bass": "Bass beatboxing emphasizes low-frequency sounds. Practice sub-bass techniques and throat bass for deep tones.",
+            "modern": "Modern beatboxing incorporates electronic sounds and complex polyrhythms using advanced vocal techniques."
+        }
         
-        # Create mock audio data - Pure Python implementation for AWS Lambda
-        duration = 2.0
-        samples = int(16000 * duration)
+        lesson = beatbox_lessons.get(style, "Beatboxing is vocal percussion using mouth, lips, tongue, and voice.")
         
-        # Generate simple test audio without numpy
-        test_audio = []
-        for i in range(min(samples, 1000)):  # Limit samples for Lambda performance
-            t = i / 16000.0  # Time in seconds
-            # Simple sine wave with decay
-            sine_val = 0.7 * math.sin(2 * math.pi * 80 * t) * math.exp(-3 * t)
-            # Add some noise
-            noise = 0.1 * random.gauss(0, 1)
-            test_audio.append(sine_val + noise)
-        
-        result = self.tiny_beatbox.recognize_beatbox(test_audio)
+        # Use educational simulator
+        self.audio_educator.start_audio_lesson(style)
+        result = self.audio_educator.teach_audio_concept(style)
         processing_time = (time.time() - start_time) * 1000
-        
-        self.audio_state["beatbox_listening"] = True
-        self.audio_state["performance_metrics"]["accuracy"] = result.overall_confidence * 100
         
         return {
             "success": True,
             "style": style,
-            "recognition_accuracy": result.overall_confidence * 100,
+            "educational_content": lesson,
+            "engagement_score": result.engagement_score * 100,
             "processing_time_ms": round(processing_time, 2),
-            "bpm_detected": result.bpm_detected,
-            "quality_score": result.quality_score,
-            "patterns_detected": len(result.patterns),
-            "enhancement_suggestions": result.enhancement_suggestions,
-            "engine_status": "TINY_AI_ACTIVE",
-            "tiny_ai_result": {
-                "primary_style": result.primary_style.value,
-                "confidence": result.overall_confidence,
-                "patterns": ["kick", "snare"]
-            }
+            "concepts_learned": result.concepts_learned,
+            "lesson_suggestions": result.next_suggestions,
+            "learning_status": "EDUCATIONAL_CONTENT_DELIVERED",
+            "note": "This teaches beatbox concepts - no audio recognition occurs"
         }
     
     def set_emotional_state(self, emotion: str):
@@ -396,46 +384,53 @@ class BEAEngine:
             "position": scaled_position
         }
     
-    def get_performance_metrics(self):
-        """Get system performance metrics"""
-        tiny_report = self.tiny_beatbox.get_performance_report()
+    def get_educational_metrics(self):
+        """Get educational system metrics"""
+        learning_report = self.audio_educator.get_learning_progress()
         
         return {
-            "system_status": "OPTIMAL",
+            "system_status": "EDUCATIONAL_CONTENT_ACTIVE",
             "bea_engine_version": BEA_VERSION,
             "engine_status": BEA_ENGINE_STATUS,
             "emotional_state": f"E{self.audio_state['emotional_state']:02d}",
-            "tiny_ai": {
-                "status": self.tiny_ai_status,
-                "engine_active": self.tiny_beatbox.is_listening,
-                "total_recognitions": tiny_report["recognition_metrics"]["total_recognitions"],
-                "average_confidence": tiny_report["recognition_metrics"]["average_confidence"],
-                "average_processing_time": tiny_report["recognition_metrics"]["average_processing_time"],
-                "buffer_size": tiny_report["system_status"]["buffer_size"]
+            "education_system": {
+                "status": self.education_status,
+                "session_active": learning_report["education_status"]["session_active"],
+                "total_concepts_taught": learning_report["learning_metrics"]["total_concepts_taught"],
+                "average_engagement": learning_report["learning_metrics"]["average_engagement"],
+                "lesson_duration": learning_report["learning_metrics"]["lesson_duration"],
+                "concepts_available": len(learning_report["education_status"]["concepts_available"])
             }
         }
     
-    def get_tiny_ai_capabilities(self):
-        """Get TinyAI capabilities"""
+    def get_educational_capabilities(self):
+        """Get educational capabilities"""
         return {
             "available": True,
-            "status": self.tiny_ai_status,
-            "engine_initialized": True,
+            "status": self.education_status,
+            "content_initialized": True,
             "capabilities": [
-                "real_time_beatbox_recognition",
-                "pattern_classification",
-                "style_detection",
-                "bpm_estimation",
-                "quality_scoring",
-                "enhancement_suggestions"
+                "audio_concept_education",
+                "beatbox_technique_teaching",
+                "spatial_audio_theory",
+                "frequency_explanation",
+                "interactive_learning",
+                "conversation_enhancement"
             ],
-            "processing_modes": ["real_time", "high_accuracy", "low_latency"],
-            "supported_styles": ["classic", "modern", "bass", "techno", "vocal", "freestyle"],
-            "sample_rate": 16000
+            "learning_modes": ["interactive", "guided", "self_paced"],
+            "available_topics": ["frequency", "amplitude", "spatial audio", "beatboxing", "acoustics", "sound engineering"],
+            "educational_approach": "conversational"
         }
+    
+    def get_status(self):
+        """Get current educational system status"""
+        if hasattr(self, 'education_status') and self.education_status == "active":
+            return "EDUCATIONAL_CONTENT_ACTIVE"
+        else:
+            return "EDUCATIONAL_SYSTEM_READY"
 
-# Initialize global BEA Engine
-bea_engine = BEAEngine()
+# Initialize global BEA Educational Engine
+bea_engine = BEAEducationalEngine()
 
 def lambda_handler(event, context):
     """AWS Lambda handler for BEA Pumpkin Pi with TinyAI"""
@@ -464,18 +459,18 @@ def lambda_handler(event, context):
 def handle_launch():
     """Handle skill launch"""
     speech_text = (
-        f"BEA Pumpkin Pi version {BEA_VERSION} with TinyAI is now online! "
-        f"Your Echo Dot is equipped with revolutionary 4D audio intelligence, "
-        f"real-time beatbox recognition, and emotional audio processing. "
-        f"Try saying 'tiny ai status' or 'start beatbox mode'."
+        f"Welcome to BEA Pumpkin Pi Educational version {BEA_VERSION}! "
+        f"I'm here to teach you about audio technology through interactive conversation. "
+        f"I can explain concepts like frequency, spatial audio, beatboxing techniques, and sound engineering. "
+        f"Try saying 'teach me about audio' or 'explain frequency'."
     )
     
     return build_response(
         speech_text,
         should_end=False,
-        reprompt="What audio enhancement would you like to experience?",
-        card_title="BEA Pumpkin Pi TinyAI Online",
-        card_content=f"Version {BEA_VERSION} • TinyAI Ready • Real-time Processing"
+        reprompt="What audio concept would you like to learn about?",
+        card_title="BEA Pumpkin Pi Educational",
+        card_content=f"Version {BEA_VERSION} • Educational Content • Interactive Learning"
     )
 
 def handle_intent(event, session_id):
@@ -611,109 +606,111 @@ def handle_bea_framework(slots):
         return build_response(f"BEA Framework encountered a system query issue: {str(e)}")
 
 def handle_audio_enhancement(slots):
-    """Handle audio enhancement"""
-    enhancement_type = get_slot_value(slots, "EnhancementType", "spatial")
-    intensity = int(get_slot_value(slots, "IntensityLevel", "3"))
+    """Handle audio concept education"""
+    enhancement_type = get_slot_value(slots, "AudioConcept", "frequency")
+    intensity = int(get_slot_value(slots, "IntensityLevel", "1"))
     
-    result = bea_engine.process_audio_enhancement(enhancement_type, intensity)
+    result = bea_engine.teach_audio_enhancement(enhancement_type, intensity)
     
     speech_text = (
-        f"BEA {enhancement_type} audio enhancement is now active at level {intensity}! "
-        f"Processing completed in {result['processing_time_ms']} milliseconds. "
-        f"{result['audio_improvements'][0]} "
-        f"The BEA Audio Matrix is optimizing your experience."
+        f"Let me teach you about {enhancement_type} audio concepts! "
+        f"{result['educational_content']} "
+        f"This is educational content designed to help you understand how audio technology works. "
+        f"Would you like to learn about other audio concepts?"
     )
-    
-    return build_response(
-        speech_text,
-        card_title=f"BEA {enhancement_type.title()} Enhancement",
-        card_content=f"Enhancement: {enhancement_type.title()}\nIntensity: Level {intensity}"
-    )
-
-def handle_beatbox_recognition(slots):
-    """Handle beatbox recognition with TinyAI"""
-    style = get_slot_value(slots, "BeatboxStyle", "freestyle")
-    
-    result = bea_engine.process_beatbox_recognition(style)
-    
-    if result["success"] and result.get("engine_status") == "TINY_AI_ACTIVE":
-        tiny_result = result.get("tiny_ai_result", {})
-        speech_text = (
-            f"BEA TinyAI beatbox recognition is now active for {style} style! "
-            f"Real-time analysis detected {result.get('patterns_detected', 0)} patterns "
-            f"with {result['recognition_accuracy']:.1f}% confidence. "
-            f"BPM detection: {result.get('bpm_detected', 0):.0f} beats per minute. "
-            f"Quality score: {result.get('quality_score', 0):.2f}. "
-            f"Primary style identified as {tiny_result.get('primary_style', style)}. "
-            f"Processing completed in {result['processing_time_ms']:.1f} milliseconds. "
-            f"Start your beatbox performance!"
-        )
-        
-        suggestions = result.get("enhancement_suggestions", [])
-        if suggestions:
-            speech_text += f" Enhancement tip: {suggestions[0]}"
-    else:
-        speech_text = f"BEA beatbox recognition is active for {style} style! Start your performance."
     
     return build_response(
         speech_text,
         should_end=False,
-        reprompt="Go ahead and start your beatbox! I'm listening.",
-        card_title=f"BEA {style.title()} Beatbox Recognition",
-        card_content=f"Style: {style.title()}\nEngine: TinyAI Active"
+        reprompt="What other audio concepts interest you?",
+        card_title=f"Audio Education: {enhancement_type.title()}",
+        card_content=f"Concept: {enhancement_type.title()}\nEducational Content Only"
     )
 
-def handle_tiny_ai_status():
-    """Handle TinyAI status request"""
-    capabilities = bea_engine.get_tiny_ai_capabilities()
+def handle_beatbox_recognition(slots):
+    """Handle beatbox education"""
+    style = get_slot_value(slots, "BeatboxConcept", "kick drum")
+    
+    result = bea_engine.teach_beatbox_concepts(style)
     
     speech_text = (
-        f"TinyAI engine status: {capabilities['status']}. "
-        f"BEA TinyAI integration is fully operational with {len(capabilities['capabilities'])} active capabilities. "
-        f"Real-time beatbox recognition supports {len(capabilities['supported_styles'])} styles "
-        f"with {capabilities['sample_rate']} hertz sample rate processing. "
-        f"Available processing modes: {', '.join(capabilities['processing_modes'])}. "
-        f"Micro feature extraction includes spectral analysis, pattern classification, "
-        f"and tempo detection. The TinyAI system brings edge computing intelligence "
-        f"to your voice assistant!"
+        f"Let me teach you about {style} beatboxing! "
+        f"{result['educational_content']} "
+        f"Your engagement score is {result['engagement_score']:.1f}%. "
+        f"Beatboxing is a fascinating art form that combines vocal technique with rhythmic creativity. "
+        f"Would you like to learn about other beatbox techniques?"
     )
     
     return build_response(
         speech_text,
-        card_title="BEA TinyAI Status",
-        card_content=f"Status: {capabilities['status']}\nCapabilities: {len(capabilities['capabilities'])}\nStyles: {len(capabilities['supported_styles'])}"
+        should_end=False,
+        reprompt="What other beatbox techniques interest you?",
+        card_title=f"Beatbox Education: {style.title()}",
+        card_content=f"Technique: {style.title()}\nEducational Content Only"
+    )
+
+def handle_tiny_ai_status():
+    """Handle educational status request"""
+    capabilities = bea_engine.get_educational_capabilities()
+    
+    speech_text = (
+        f"BEA Educational system status: {capabilities['status']}. "
+        f"Educational content is fully operational with {len(capabilities['capabilities'])} learning capabilities. "
+        f"I can teach about {len(capabilities['available_topics'])} different audio topics "
+        f"through interactive conversation and concept explanation. "
+        f"Available learning modes: {', '.join(capabilities['learning_modes'])}. "
+        f"Educational features include concept explanation, interactive discussion, "
+        f"and guided learning. This system teaches you about audio technology "
+        f"through conversation!"
+    )
+    
+    return build_response(
+        speech_text,
+        card_title="BEA Educational Status",
+        card_content=f"Status: {capabilities['status']}\nTopics: {len(capabilities['available_topics'])}\nModes: {len(capabilities['learning_modes'])}"
     )
 
 def handle_emotional_state(slots):
-    """Handle emotional state setting"""
+    """Handle emotional state education"""
     emotion = get_slot_value(slots, "EmotionalState", "focused")
     
     result = bea_engine.set_emotional_state(emotion)
     
     speech_text = (
-        f"BEA Emotional Intelligence activated! Emotional state set to {emotion} "
-        f"with framework profile {result['framework_status']}. "
-        f"The BEA Emotional Matrix is now adapting all audio processing "
-        f"to enhance your {emotion} experience."
+        f"Great question about {emotion} emotional states! In audio technology, "
+        f"emotional context affects how we perceive sound. The BEA Framework uses "
+        f"32 different emotional states to study audio perception. Your chosen state "
+        f"{emotion} with profile {result['framework_status']} represents how different "
+        f"moods might influence audio processing in real systems. This is educational "
+        f"content about emotional AI concepts!"
     )
     
     return build_response(
         speech_text,
-        card_title=f"BEA Emotional Intelligence - {emotion.title()}",
-        card_content=f"Emotion: {emotion.title()}\nProfile: {result['framework_status']}"
+        card_title=f"BEA Emotional Education - {emotion.title()}",
+        card_content=f"Learning about: {emotion.title()}\nProfile: {result['framework_status']}\nEducational Content Only"
     )
 
 def handle_spatial_audio(slots):
-    """Handle spatial audio positioning"""
+    """Handle spatial audio education"""
     direction = get_slot_value(slots, "Direction", "center")
     distance = int(get_slot_value(slots, "Distance", "2"))
     
     result = bea_engine.process_spatial_positioning(direction, distance)
     
     speech_text = (
-        f"BEA 4D Spatial Audio positioning activated! Sound source placed {direction} "
-        f"at {distance} meters distance. The BEA Spatial Matrix is creating "
-        f"immersive audio effects with real-time calculations!"
+        f"Let me teach you about spatial audio! Spatial audio technology creates "
+        f"the perception of sound coming from different directions, like {direction} "
+        f"at {distance} meters distance. Real spatial audio systems use techniques "
+        f"like HRTF processing, binaural recording, and psychoacoustic modeling to "
+        f"create immersive 3D sound experiences. This is how modern VR and gaming "
+        f"audio systems work!"
+    )
+    
+    return build_response(
+        speech_text,
+        card_title=f"Spatial Audio Education - {direction.title()}",
+        card_content=f"Direction: {direction.title()}\nDistance: {distance}m\nEducational Content About Spatial Audio"
     )
     
     return build_response(
@@ -723,67 +720,67 @@ def handle_spatial_audio(slots):
     )
 
 def handle_performance_status():
-    """Handle performance status request"""
-    metrics = bea_engine.get_performance_metrics()
+    """Handle educational metrics request"""
+    metrics = bea_engine.get_educational_metrics()
     
     speech_text = (
-        f"BEA system performance: {metrics['system_status']}. "
+        f"BEA educational system performance: {metrics['system_status']}. "
         f"Engine version {metrics['bea_engine_version']} running with "
         f"{metrics['engine_status']} status. "
-        f"TinyAI engine: {metrics['tiny_ai']['status']} with "
-        f"{metrics['tiny_ai']['total_recognitions']} total recognitions completed. "
-        f"Average confidence: {metrics['tiny_ai']['average_confidence']:.1%}. "
-        f"Processing time: {metrics['tiny_ai']['average_processing_time']:.1f} milliseconds. "
-        f"All systems operating at optimal performance!"
+        f"Educational system: {metrics['education_system']['status']} with "
+        f"{metrics['education_system']['total_concepts_taught']} concepts taught. "
+        f"Average engagement: {metrics['education_system']['average_engagement']:.1%}. "
+        f"Session duration: {metrics['education_system']['lesson_duration']:.1f} minutes. "
+        f"All educational systems ready for interactive learning!"
     )
     
     return build_response(
         speech_text,
-        card_title="BEA Performance Status",
-        card_content=f"Status: {metrics['system_status']}\nVersion: {metrics['bea_engine_version']}\nTinyAI: {metrics['tiny_ai']['status']}"
+        card_title="BEA Educational Performance",
+        card_content=f"Status: {metrics['system_status']}\nVersion: {metrics['bea_engine_version']}\nConcepts Available: {metrics['education_system']['concepts_available']}"
     )
 
 def handle_help():
     """Handle help request"""
     speech_text = (
-        f"Welcome to BEA Pumpkin Pi version {BEA_VERSION} with TinyAI integration! "
-        f"I offer professional-grade audio processing with real-time capabilities. "
-        f"Try saying: 'tiny ai status' to check AI capabilities, "
-        f"'start beatbox mode' for real-time pattern analysis, "
-        f"'enhance my audio' for 4D spatial processing, "
-        f"'set emotion to focused' for emotional intelligence, "
-        f"or 'check performance' for system metrics. "
-        f"What would you like to experience?"
+        f"Welcome to BEA Pumpkin Pi Educational version {BEA_VERSION}! "
+        f"I teach audio technology concepts through interactive conversation. "
+        f"Try saying: 'teach me about audio' to learn about audio processing, "
+        f"'explain beatboxing' for vocal percussion techniques, "
+        f"'what is spatial audio' for 3D sound concepts, "
+        f"'explain frequency' for acoustic fundamentals, "
+        f"or 'educational status' for learning progress. "
+        f"What audio concept interests you?"
     )
     
     return build_response(
         speech_text,
         should_end=False,
-        reprompt="What audio enhancement would you like to try?",
-        card_title="BEA Pumpkin Pi TinyAI Help",
-        card_content=f"Version: {BEA_VERSION}\nTinyAI: Active\nFeatures: Audio Enhancement, Beatbox Recognition, Emotional Intelligence"
+        reprompt="What audio technology topic would you like to learn about?",
+        card_title="BEA Pumpkin Pi Educational Help",
+        card_content=f"Version: {BEA_VERSION}\nEducational Content\nTopics: Audio, Beatboxing, Spatial Audio, Acoustics"
     )
 
 def handle_stop():
     """Handle stop/cancel requests"""
-    return build_response("Thank you for using BEA Pumpkin Pi with TinyAI. Stay tuned for amazing audio experiences!")
+    return build_response("Thank you for using BEA Pumpkin Pi Educational! Keep exploring audio technology concepts!")
 
 def handle_fallback():
     """Handle fallback intent when Alexa doesn't understand the request"""
     speech_text = (
-        "I didn't quite understand that. BEA Pumpkin Pi with TinyAI offers advanced audio processing. "
-        "Try saying 'tiny ai status' to check AI capabilities, "
-        "'start beatbox mode' for real-time analysis, "
-        "'enhance my audio' for 4D processing, "
-        "or 'help' for more options. What would you like to try?"
+        "I didn't quite understand that. BEA Pumpkin Pi Educational teaches audio technology concepts. "
+        "Try saying 'teach me about audio' to learn about sound processing, "
+        "'explain beatboxing' for vocal technique education, "
+        "'what is spatial audio' for 3D sound concepts, "
+        "or 'help' for more learning options. What interests you?"
     )
     
     return build_response(
         speech_text,
         should_end=False,
-        reprompt="What audio enhancement would you like to experience?",
-        card_title="BEA Pumpkin Pi - Available Commands",
-        card_content="TinyAI • Audio Enhancement • Beatbox Recognition • Emotional Intelligence"
+        reprompt="What audio technology topic would you like to explore?",
+        card_title="BEA Pumpkin Pi Educational - Available Topics",
+        card_content="Educational Content • Audio Concepts • Beatbox Techniques • Spatial Audio • Acoustics"
     )
 
 def handle_session_end(session_id):
