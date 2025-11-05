@@ -1,10 +1,10 @@
-# 🎤 BEA Pumpkin Pi TinyAI - Quick Amazon Deployment Card
+# � BEA Pumpkin Pi Educational - Quick Amazon Deployment Guide
 
 ## 📌 **FASTEST DEPLOYMENT METHOD**
 
 ### **🚀 AWS Lambda Console (Copy & Paste)**
 1. **Go to:** https://console.aws.amazon.com/lambda/
-2. **Create function:** `BEA-Pumpkin-Pi-TinyAI`
+2. **Create function:** `BEA-Pumpkin-Pi-Educational`
 3. **Runtime:** Python 3.9
 4. **Copy & paste:** `aws_lambda_console_ready.py` (entire file)
 5. **Handler:** `lambda_function.lambda_handler`
@@ -26,19 +26,19 @@
 
 ### **Voice Commands for Alexa Simulator:**
 ```
-"Alexa, ask bea pumpkin pi for tiny ai status"
-"Alexa, ask bea pumpkin pi to start beatbox mode"
-"Alexa, ask bea pumpkin pi to recognize bass beatbox"  
-"Alexa, ask bea pumpkin pi to enhance my audio"
-"Alexa, ask bea pumpkin pi to check performance"
+"Alexa, ask bea pumpkin pi to teach me about audio"
+"Alexa, ask bea pumpkin pi to explain frequency"
+"Alexa, ask bea pumpkin pi about beatbox techniques"  
+"Alexa, ask bea pumpkin pi to set emotion to curious"
+"Alexa, ask bea pumpkin pi for system status"
 ```
 
-### **Expected TinyAI Response:**
+### **Expected Educational Response:**
 ```
-"TinyAI engine status: READY. BEA TinyAI integration is fully 
-operational with 8 active capabilities. Real-time beatbox 
-recognition supports 6 styles with 16000 hertz sample rate 
-processing..."
+"Welcome to BEA audio education! I can teach you about frequency, 
+which is the number of sound wave cycles per second, measured in 
+hertz. Would you like to learn about how frequency affects the 
+pitch we hear, or explore other audio concepts?"
 ```
 
 ---
@@ -48,7 +48,7 @@ processing..."
 ### **Main Deployment Files:**
 - ✅ `aws_lambda_console_ready.py` - **Copy this to Lambda Console**
 - ✅ `models/en-US.json` - **Copy to Alexa Skills Kit JSON Editor**
-- ✅ `bea-pumpkin-pi-tinyai-deploy.zip` - **Alternative ZIP upload**
+- ✅ `lambda_function.py` - **Alternative standard filename**
 
 ### **Documentation:**
 - 📖 `AMAZON_DEPLOYMENT_GUIDE.md` - Complete deployment guide

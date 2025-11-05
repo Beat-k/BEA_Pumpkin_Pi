@@ -25,7 +25,7 @@ from typing import Dict, Any, Optional
 from datetime import datetime, timezone
 
 # BEA Pumpkin Pi Configuration
-BEA_VERSION = "1.3.0"
+BEA_VERSION = "1.4.0"
 ARIA_PROTOCOL_VERSION = "1.0"
 
 # BEA Framework Emotional State IDs (32-State System)
