@@ -34,64 +34,55 @@
           ]
         },
         {
-          "name": "AudioEnhancementIntent",
+          "name": "AudioEducationIntent",
           "slots": [
             {
-              "name": "EnhancementType",
-              "type": "EnhancementTypeSlot"
-            },
-            {
-              "name": "IntensityLevel", 
-              "type": "AMAZON.NUMBER"
+              "name": "AudioConcept",
+              "type": "AudioConceptSlot"
             }
           ],
           "samples": [
-            "enhance my audio",
-            "improve the sound",
-            "boost audio quality",
-            "activate {EnhancementType} enhancement",
-            "set enhancement to {IntensityLevel}",
-            "enhance audio with {EnhancementType}",
-            "turn on four d audio",
-            "activate spatial audio",
-            "improve background sounds",
-            "enhance foreground audio",
-            "turn on {EnhancementType} audio",
-            "enable {EnhancementType} processing",
-            "activate {EnhancementType} audio enhancement",
-            "start {EnhancementType} optimization",
-            "boost audio with level {IntensityLevel}",
-            "turn on advanced audio processing",
-            "activate professional audio enhancement",
-            "enable studio quality audio",
-            "optimize audio for {EnhancementType}"
+            "teach me about audio",
+            "explain {AudioConcept}",
+            "what is {AudioConcept}",
+            "learn about audio technology",
+            "how does {AudioConcept} work",
+            "audio education about {AudioConcept}",
+            "tell me about sound",
+            "explain audio concepts",
+            "teach me sound theory",
+            "learn about {AudioConcept} technology",
+            "what is audio processing",
+            "how does sound work",
+            "explain audio engineering",
+            "learn about frequency",
+            "teach me about acoustics"
           ]
         },
         {
-          "name": "BeatboxRecognitionIntent",
+          "name": "BeatboxEducationIntent",
           "slots": [
             {
-              "name": "BeatboxStyle",
-              "type": "BeatboxStyleSlot"
+              "name": "BeatboxConcept",
+              "type": "BeatboxConceptSlot"
             }
           ],
           "samples": [
-            "recognize beatbox",
-            "start beatbox mode",
-            "listen for beatbox",
-            "detect {BeatboxStyle} beatbox",
-            "analyze my beatbox",
-            "recognize {BeatboxStyle} sounds",
-            "start beatbox recognition",
-            "listen to my beats",
-            "detect my rhythm",
-            "analyze my sounds",
-            "start {BeatboxStyle} recognition",
-            "listen for {BeatboxStyle} patterns",
-            "activate beatbox analysis",
-            "enable rhythm detection",
-            "start pattern recognition",
-            "analyze beatbox performance"
+            "teach me beatbox",
+            "learn about beatboxing",
+            "explain {BeatboxConcept}",
+            "what is {BeatboxConcept}",
+            "how to beatbox",
+            "beatbox education",
+            "learn {BeatboxConcept} sounds",
+            "teach me about rhythm",
+            "explain beatbox techniques",
+            "what are beatbox patterns",
+            "how do you make {BeatboxConcept} sounds",
+            "learn beatbox theory",
+            "beatbox sound education",
+            "teach rhythm patterns",
+            "explain vocal percussion"
           ]
         },
         {
@@ -112,88 +103,48 @@
           ]
         },
         {
-          "name": "GamingModeIntent",
+          "name": "AudioConceptIntent",
           "slots": [
             {
-              "name": "GameType",
-              "type": "GameTypeSlot"
+              "name": "AudioTopic",
+              "type": "AudioTopicSlot"
             }
           ],
           "samples": [
-            "start gaming mode",
-            "enable game audio",
-            "optimize for {GameType}",
-            "activate tactical audio",
-            "enhance gaming sounds",
-            "turn on competitive mode",
-            "start {GameType} optimization",
-            "enable {GameType} audio",
-            "activate {GameType} mode",
-            "optimize gaming for {GameType}",
-            "turn on {GameType} enhancement",
-            "start competitive gaming",
-            "enable tactical mode",
-            "activate gaming optimization",
-            "turn on professional gaming mode"
+            "what is {AudioTopic}",
+            "explain {AudioTopic}",
+            "teach me about {AudioTopic}",
+            "learn about sound",
+            "how does audio work",
+            "audio concepts",
+            "sound theory",
+            "explain frequency",
+            "what is spatial audio",
+            "how does {AudioTopic} work",
+            "audio education",
+            "sound engineering basics",
+            "learn audio technology",
+            "audio theory lesson"
           ]
         },
         {
-          "name": "SpatialAudioIntent",
-          "slots": [
-            {
-              "name": "Direction",
-              "type": "DirectionSlot"
-            },
-            {
-              "name": "Distance",
-              "type": "AMAZON.NUMBER"
-            },
-            {
-              "name": "Destination",
-              "type": "DestinationSlot"
-            }
-          ],
+          "name": "SystemStatusIntent",
           "samples": [
-            "place sound {Direction}",
-            "move audio {Direction}",
-            "set position {Direction}",
-            "place sound {Distance} meters {Direction}",
-            "create spatial effect",
-            "enable four d positioning",
-            "move audio {Distance} units {Direction}",
-            "position sound {Direction}",
-            "move sound {Direction}",
-            "place audio behind me",
-            "move sound forward",
-            "position audio center",
-            "create three d effect",
-            "enable spatial audio",
-            "activate positional audio",
-            "send audio to {Destination}",
-            "route sound to {Destination}",
-            "transfer audio to {Destination}",
-            "sync with {Destination}",
-            "connect to {Destination} device"
-          ]
-        },
-        {
-          "name": "PerformanceStatusIntent",
-          "samples": [
-            "check performance",
+            "check status",
             "show status",
-            "what's my audio quality",
+            "what's the system status",
             "performance report",
             "system status",
-            "how is the enhancement working",
-            "check audio status",
+            "how is everything working",
+            "check system status",
             "show system metrics",
-            "display performance data",
-            "audio quality report",
+            "display status",
+            "system report",
             "check system health",
-            "show enhancement status",
-            "performance metrics",
-            "system diagnostics",
-            "audio performance report"
+            "show framework status",
+            "system information",
+            "status report",
+            "framework report"
           ]
         },
         {
@@ -265,10 +216,6 @@
             {
               "name": "ARIACommand",
               "type": "ARIACommandSlot"
-            },
-            {
-              "name": "Destination",
-              "type": "DestinationSlot"
             }
           ],
           "samples": [
@@ -276,22 +223,19 @@
             "check aria",
             "aria sync",
             "aria protocol status",
-            "sync devices with aria",
             "aria alignment check",
             "check aural resonance",
             "aria intelligence report",
             "activate aria protocol",
-            "aria cross device sync",
             "check intelligent alignment",
             "aria emotional resonance",
             "aria quality analysis",
-            "sync aria across devices",
             "aria protocol sync",
-            "aria {ARIACommand} to {Destination}",
-            "sync aria with {Destination}",
-            "route aria to {Destination}",
-            "connect aria to {Destination}",
-            "aria protocol {ARIACommand}"
+            "aria protocol {ARIACommand}",
+            "check aria {ARIACommand}",
+            "aria {ARIACommand} status",
+            "show aria {ARIACommand}",
+            "aria {ARIACommand} report"
           ]
         },
         {
@@ -361,56 +305,39 @@
       ],
       "types": [
         {
-          "name": "EnhancementTypeSlot",
+          "name": "AudioConceptSlot",
           "values": [
-            {"name": {"value": "spatial", "synonyms": ["three d", "3d", "positional", "dimensional"]}},
-            {"name": {"value": "dimensional", "synonyms": ["four d", "4d", "multi dimensional", "advanced"]}},
-            {"name": {"value": "background", "synonyms": ["ambient", "environmental", "atmosphere"]}},
-            {"name": {"value": "foreground", "synonyms": ["primary", "main", "vocal", "lead"]}},
-            {"name": {"value": "gaming", "synonyms": ["tactical", "competitive", "esports", "pro"]}},
-            {"name": {"value": "emotional", "synonyms": ["mood", "psychological", "mental", "feeling"]}},
-            {"name": {"value": "cognitive", "synonyms": ["mental", "focus", "concentration", "brain"]}},
-            {"name": {"value": "professional", "synonyms": ["studio", "pro", "premium", "advanced"]}}
+            {"name": {"value": "frequency", "synonyms": ["pitch", "tone", "hertz", "hz"]}},
+            {"name": {"value": "spatial audio", "synonyms": ["three d", "3d", "positional", "surround"]}},
+            {"name": {"value": "acoustics", "synonyms": ["room acoustics", "sound behavior", "audio environment"]}},
+            {"name": {"value": "amplitude", "synonyms": ["volume", "loudness", "intensity", "decibels"]}},
+            {"name": {"value": "waveform", "synonyms": ["sound wave", "audio wave", "signal"]}},
+            {"name": {"value": "audio processing", "synonyms": ["signal processing", "digital audio", "dsp"]}},
+            {"name": {"value": "compression", "synonyms": ["dynamic range", "audio compression", "limiting"]}},
+            {"name": {"value": "equalization", "synonyms": ["eq", "frequency response", "tone control"]}}
           ]
         },
         {
-          "name": "BeatboxStyleSlot",
+          "name": "BeatboxConceptSlot",
           "values": [
-            {
-              "name": {
-                "value": "classic"
-              }
-            },
-            {
-              "name": {
-                "value": "modern"
-              }
-            },
-            {
-              "name": {
-                "value": "bass"
-              }
-            },
-            {
-              "name": {
-                "value": "snare"
-              }
-            },
-            {
-              "name": {
-                "value": "vocal"
-              }
-            },
-            {
-              "name": {
-                "value": "techno"
-              }
-            },
-            {
-              "name": {
-                "value": "freestyle"
-              }
-            }
+            {"name": {"value": "kick drum", "synonyms": ["bass drum", "kick", "boom", "thump"]}},
+            {"name": {"value": "snare", "synonyms": ["snare drum", "clap", "snap", "crack"]}},
+            {"name": {"value": "hi hat", "synonyms": ["cymbals", "tss", "tick", "closed hat"]}},
+            {"name": {"value": "bass", "synonyms": ["sub bass", "low frequency", "wobble", "rumble"]}},
+            {"name": {"value": "vocal percussion", "synonyms": ["mouth drums", "vocal beats", "human beatbox"]}},
+            {"name": {"value": "rhythm patterns", "synonyms": ["beat patterns", "grooves", "rhythms", "timing"]}},
+            {"name": {"value": "breathing techniques", "synonyms": ["breath control", "air flow", "respiratory"]}}
+          ]
+        },
+        {
+          "name": "AudioTopicSlot",
+          "values": [
+            {"name": {"value": "sound waves", "synonyms": ["audio waves", "acoustic waves", "vibrations"]}},
+            {"name": {"value": "frequency response", "synonyms": ["frequency range", "audio spectrum", "bandwidth"]}},
+            {"name": {"value": "digital audio", "synonyms": ["digital sound", "audio files", "digital processing"]}},
+            {"name": {"value": "studio recording", "synonyms": ["audio recording", "sound recording", "music production"]}},
+            {"name": {"value": "acoustics", "synonyms": ["room acoustics", "sound behavior", "audio environment"]}},
+            {"name": {"value": "audio engineering", "synonyms": ["sound engineering", "audio technology", "acoustic engineering"]}}
           ]
         },
         {
@@ -461,32 +388,6 @@
           ]
         },
         {
-          "name": "GameTypeSlot", 
-          "values": [
-            {"name": {"value": "fps", "synonyms": ["first person shooter", "shooter", "call of duty", "battlefield"]}},
-            {"name": {"value": "fighting", "synonyms": ["combat", "martial arts", "street fighter", "tekken"]}},
-            {"name": {"value": "racing", "synonyms": ["driving", "car", "formula", "speed"]}},
-            {"name": {"value": "strategy", "synonyms": ["rts", "real time strategy", "tactical", "planning"]}},
-            {"name": {"value": "tactical", "synonyms": ["stealth", "strategic", "military", "squad"]}},
-            {"name": {"value": "competitive", "synonyms": ["esports", "tournament", "professional", "ranked"]}},
-            {"name": {"value": "moba", "synonyms": ["league of legends", "dota", "multiplayer battle arena"]}},
-            {"name": {"value": "mmo", "synonyms": ["massively multiplayer", "online", "world of warcraft"]}},
-            {"name": {"value": "battle royale", "synonyms": ["br", "fortnite", "pubg", "survival"]}}
-          ]
-        },
-        {
-          "name": "DirectionSlot",
-          "values": [
-            {"name": {"value": "left", "synonyms": ["port", "west", "leftward"]}},
-            {"name": {"value": "right", "synonyms": ["starboard", "east", "rightward"]}},
-            {"name": {"value": "front", "synonyms": ["forward", "ahead", "north", "in front"]}},
-            {"name": {"value": "back", "synonyms": ["behind", "rear", "south", "backward"]}},
-            {"name": {"value": "above", "synonyms": ["up", "overhead", "top", "upward"]}},
-            {"name": {"value": "below", "synonyms": ["down", "underneath", "bottom", "downward"]}},
-            {"name": {"value": "center", "synonyms": ["middle", "central", "centered", "middle position"]}}
-          ]
-        },
-        {
           "name": "ARIACommandSlot",
           "values": [
             {"name": {"value": "status", "synonyms": ["check", "report", "analysis"]}},
@@ -507,18 +408,13 @@
           ]
         },
         {
-          "name": "DestinationSlot",
+          "name": "ConceptTopicSlot",
           "values": [
-            {"name": {"value": "bea aura", "synonyms": ["aura server", "nas", "storage hub", "data center"]}},
-            {"name": {"value": "lumin pi", "synonyms": ["lumin device", "raspberry pi", "edge device", "local device"]}},
-            {"name": {"value": "beatbox", "synonyms": ["bea beatbox", "beatbox system", "rhythm device"]}},
-            {"name": {"value": "speakerbox", "synonyms": ["bea speakerbox", "speaker system", "audio output"]}},
-            {"name": {"value": "gaming setup", "synonyms": ["gaming system", "game device", "tactical audio"]}},
-            {"name": {"value": "studio", "synonyms": ["recording studio", "professional audio", "production setup"]}},
-            {"name": {"value": "home theater", "synonyms": ["theater system", "surround sound", "entertainment center"]}},
-            {"name": {"value": "mobile device", "synonyms": ["phone", "tablet", "portable device", "mobile"]}},
-            {"name": {"value": "cloud", "synonyms": ["bea cloud", "cloud storage", "remote server", "online"]}},
-            {"name": {"value": "all devices", "synonyms": ["everywhere", "entire network", "all systems", "broadcast"]}}
+            {"name": {"value": "audio theory", "synonyms": ["sound theory", "acoustic theory", "audio science"]}},
+            {"name": {"value": "emotional intelligence", "synonyms": ["emotion ai", "feeling recognition", "mood detection"]}},
+            {"name": {"value": "conversation design", "synonyms": ["dialog design", "chat systems", "voice interfaces"]}},
+            {"name": {"value": "beatbox education", "synonyms": ["vocal percussion", "mouth drumming", "rhythm training"]}},
+            {"name": {"value": "bea framework", "synonyms": ["bea system", "emotional framework", "ai architecture"]}}
           ]
         },
         {
