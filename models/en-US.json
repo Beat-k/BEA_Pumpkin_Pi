@@ -148,7 +148,7 @@
           ]
         },
         {
-          "name": "TinyAIStatusIntent",
+          "name": "TanyaStatusIntent",
           "slots": [
             {
               "name": "AICapability",
@@ -156,28 +156,30 @@
             }
           ],
           "samples": [
+            "tanya status",
+            "check tanya",
+            "tanya report",
+            "show tanya capabilities",
+            "tanya ai status",
+            "check tanya system",
+            "tanya performance",
+            "tanya status report",
+            "show tanya computing status",
+            "check tanya ai",
+            "tanya capabilities",
+            "tanya engine report",
+            "tanya ai report",
+            "check tanya intelligence",
+            "check {AICapability} tanya",
+            "tanya {AICapability} status",
+            "show tanya {AICapability}",
+            "tanya {AICapability} report",
+            "check tanya {AICapability}",
+            "tanya beatbox performance",
+            "real time tanya status",
+            "tanya intelligence report",
             "tiny ai status",
-            "check tiny ai",
-            "tiny ai report",
-            "show ai capabilities",
-            "ai engine status",
-            "check ai system",
-            "tiny ai performance",
-            "ai status report",
-            "show edge computing status",
-            "check beatbox ai",
-            "tiny ai capabilities",
-            "ai engine report",
-            "micro ai status",
-            "edge ai report",
-            "check {AICapability} ai",
-            "tiny ai {AICapability} status",
-            "show {AICapability} capabilities",
-            "ai {AICapability} report",
-            "check tiny ai {AICapability}",
-            "beatbox ai performance",
-            "real time ai status",
-            "edge intelligence report"
+            "check tiny ai"
           ]
         },
         {
@@ -271,6 +273,7 @@
             "balance {EmotionalStateA} with {EmotionalStateB}",
             "dissolve {EmotionalStateA} into {EmotionalStateB}",
             "amplify {EmotionalStateA} using {EmotionalStateB}",
+            "divergence {EmotionalStateA} from {EmotionalStateB}",
             "{MathOperation} {EmotionalStateA} and {EmotionalStateB}",
             "calculate {MathOperation} operation",
             "emotional math {MathOperation}",
@@ -420,6 +423,7 @@
         {
           "name": "AICapabilitySlot",
           "values": [
+            {"name": {"value": "tanya", "synonyms": ["tiny ai", "micro ai", "edge ai"]}},
             {"name": {"value": "beatbox", "synonyms": ["rhythm", "pattern", "sound"]}},
             {"name": {"value": "recognition", "synonyms": ["detection", "analysis", "identification"]}},
             {"name": {"value": "processing", "synonyms": ["computation", "calculation", "analysis"]}},
@@ -434,7 +438,8 @@
             {"name": {"value": "combust", "synonyms": ["fusion", "merge", "combine", "create"]}},
             {"name": {"value": "balance", "synonyms": ["equilibrium", "harmony", "stabilize"]}},
             {"name": {"value": "dissolve", "synonyms": ["breakdown", "decompose", "simplify"]}},
-            {"name": {"value": "amplify", "synonyms": ["enhance", "boost", "strengthen", "intensify"]}}
+            {"name": {"value": "amplify", "synonyms": ["enhance", "boost", "strengthen", "intensify"]}},
+            {"name": {"value": "divergence", "synonyms": ["separate", "contrast", "differ", "ether", "shift"]}}
           ]
         },
         {

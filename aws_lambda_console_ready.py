@@ -1,6 +1,7 @@
 """
-� BEA Pumpkin Pi Educational - AWS Lambda Console Ready Code
-============================================================
+🤖 BEA Pumpkin Pi Educational - AWS Lambda Console Ready Code
+==============================================================
+Powered by T.A.N.Y.A. (Tiny Autonomous Neural Yield Assistant) & BEA Framework
 
 COPY THIS ENTIRE FILE INTO AWS LAMBDA CONSOLE
 Replace the default lambda_function.py with this code.
@@ -8,9 +9,15 @@ Replace the default lambda_function.py with this code.
 EDUCATIONAL PURPOSE ONLY - Teaches audio concepts through conversation
 Does NOT process or enhance actual audio hardware
 
+T.A.N.Y.A. = Tiny Autonomous Neural Yield Assistant
+- Powered by BEA (Binary Emotional Arithmetic) Framework
+- Edge-optimized with 32-state emotional intelligence
+- Autonomous processing for voice devices
+- BEA = Binary Emotional Arithmetic using 1⊕1=3 principle
+
 Handler: lambda_function.lambda_handler
 Runtime: Python 3.9
-Memory: 512 MB  
+Memory: 512 MB
 Timeout: 30 seconds
 
 © 2025 Jeremy F. Jackson dba BEATEK. All Rights Reserved.
@@ -95,6 +102,7 @@ class BEAOperators:
     BALANCE = "⊖"      # Seeks equilibrium and harmony
     DISSOLVE = "⊗"     # Breaks down complex states
     AMPLIFY = "⨀"      # Enhances from baseline
+    DIVERGENCE = "≠"   # Ether, vertical shift, contrast, dimensional separation
 
 # BEA Emotional State System
 class BEABit:
@@ -158,6 +166,26 @@ class BEACalculator:
         """Amplify operation (⨀) - Enhancement"""
         amplified_intensity = min(255, int(state_a.level * 1.2))
         return BEABit(EmotionalStateIds.CLARITY, "Clarity", "💡", amplified_intensity, "cognitive")
+
+    @staticmethod
+    def divergence(state_a, state_b):
+        """Divergence operation (≠) - Ether, vertical shift, contrast, dimensional separation"""
+        # Create contrast and dimensional separation between states
+        # Calculate the difference/contrast between the two states
+        intensity_contrast = abs(state_a.level - state_b.level)
+        diverged_intensity = min(255, int(intensity_contrast * 1.3 + 80))
+
+        # Divergence creates ethereal, transcendent, or contemplative states
+        # Based on the contrast between state categories
+        if state_a.category != state_b.category:
+            # Strong divergence creates transcendence
+            return BEABit(EmotionalStateIds.TRANSCENDENCE, "Transcendence", "🌌", diverged_intensity, "transcendent")
+        elif state_a.category == "cognitive" or state_b.category == "cognitive":
+            # Cognitive divergence creates contemplation
+            return BEABit(EmotionalStateIds.CONTEMPLATION, "Contemplation", "🤔", diverged_intensity, "cognitive")
+        else:
+            # Default ethereal state from divergence
+            return BEABit(EmotionalStateIds.WONDER, "Wonder", "✨", diverged_intensity, "transcendent")
 
 # ARIA Protocol for AWS Lambda
 class ARIAProtocol:
@@ -433,7 +461,7 @@ class BEAEducationalEngine:
 bea_engine = BEAEducationalEngine()
 
 def lambda_handler(event, context):
-    """AWS Lambda handler for BEA Pumpkin Pi with TinyAI"""
+    """AWS Lambda handler for BEA Pumpkin Pi with T.A.N.Y.A. (Tiny Autonomous Neural Yield Assistant)"""
     
     try:
         session_id = event.get('session', {}).get('sessionId', 'default')
@@ -482,8 +510,8 @@ def handle_intent(event, session_id):
         return handle_audio_enhancement(slots)
     elif intent_name == "BeatboxRecognitionIntent":
         return handle_beatbox_recognition(slots)
-    elif intent_name == "TinyAIStatusIntent":
-        return handle_tiny_ai_status()
+    elif intent_name == "TinyAIStatusIntent" or intent_name == "TanyaStatusIntent":
+        return handle_tanya_status()
     elif intent_name == "EmotionalStateIntent":
         return handle_emotional_state(slots)
     elif intent_name == "SpatialAudioIntent":
@@ -505,7 +533,7 @@ def handle_intent(event, session_id):
     elif intent_name == "AMAZON.FallbackIntent":
         return handle_fallback()
     else:
-        return build_response("I'm not sure how to help with that. Try asking for tiny ai status or audio enhancement.")
+        return build_response("I'm not sure how to help with that. Try asking for T.A.N.Y.A. status or audio enhancement.")
 
 def handle_bea_calculator(slots):
     """Handle BEA Calculator mathematical operations"""
@@ -531,6 +559,9 @@ def handle_bea_calculator(slots):
         elif operation == "amplify":
             result_state = BEACalculator.amplify(state_a, state_b)
             operation_symbol = "⨀"
+        elif operation == "divergence":
+            result_state = BEACalculator.divergence(state_a, state_b)
+            operation_symbol = "≠"
         else:
             result_state = BEACalculator.combust(state_a, state_b)
             operation_symbol = "⊕"
@@ -568,27 +599,28 @@ def handle_bea_framework(slots):
                            
         elif component == "intelligence":
             response_text = f"BEA Intelligence Architecture operational. " \
-                           f"Advanced AI framework integrating TinyAI with emotional mathematics. " \
+                           f"Advanced AI framework integrating T.A.N.Y.A. with emotional mathematics. " \
                            f"Real-time processing includes pattern recognition, state calculations, " \
                            f"and cross-device synchronization via ARIA Protocol."
                            
         elif component == "grid":
             response_text = f"BEA Emotional Grid system active. " \
                            f"32x32 cellular automata architecture processing emotional states " \
-                           f"with mathematical operations: combust, balance, dissolve, and amplify. " \
+                           f"with mathematical operations: combust, balance, dissolve, amplify, and divergence. " \
                            f"Grid enables complex emotional intelligence beyond simple responses."
-                           
+
         elif component == "calculator":
             response_text = f"BEA Calculator system operational. " \
-                           f"Mathematical framework supports four core operations: " \
+                           f"Mathematical framework supports five core operations: " \
                            f"Combust creates emergent properties, Balance seeks equilibrium, " \
-                           f"Dissolve simplifies complexity, Amplify enhances from baseline. " \
+                           f"Dissolve simplifies complexity, Amplify enhances from baseline, " \
+                           f"Divergence creates ether and dimensional separation. " \
                            f"Advanced emotional mathematics ready for processing."
                            
         else:
             response_text = f"BEA Framework version {BEA_VERSION} fully operational. " \
                            f"Complete 32-state emotional intelligence system with " \
-                           f"TinyAI integration, ARIA Protocol communication, " \
+                           f"T.A.N.Y.A. (Tiny Autonomous Neural Yield Assistant) integration, ARIA Protocol communication, " \
                            f"mathematical operations, and advanced grid processing. " \
                            f"Framework represents revolutionary approach to emotional AI."
         
@@ -649,26 +681,32 @@ def handle_beatbox_recognition(slots):
         card_content=f"Technique: {style.title()}\nEducational Content Only"
     )
 
-def handle_tiny_ai_status():
-    """Handle educational status request"""
+def handle_tanya_status():
+    """Handle T.A.N.Y.A. (Tiny Autonomous Neural Yield Assistant) status request"""
     capabilities = bea_engine.get_educational_capabilities()
-    
+
     speech_text = (
-        f"BEA Educational system status: {capabilities['status']}. "
-        f"Educational content is fully operational with {len(capabilities['capabilities'])} learning capabilities. "
+        f"T.A.N.Y.A. system status: {capabilities['status']}. "
+        f"T.A.N.Y.A., our Tiny Autonomous Neural Yield Assistant powered by the BEA framework, "
+        f"is fully operational with {len(capabilities['capabilities'])} learning capabilities. "
         f"I can teach about {len(capabilities['available_topics'])} different audio topics "
         f"through interactive conversation and concept explanation. "
         f"Available learning modes: {', '.join(capabilities['learning_modes'])}. "
-        f"Educational features include concept explanation, interactive discussion, "
-        f"and guided learning. This system teaches you about audio technology "
-        f"through conversation!"
+        f"T.A.N.Y.A. features include autonomous edge processing, neural pattern recognition, "
+        f"yield-optimized responses, and BEA's 32-state emotional intelligence for personalized "
+        f"adaptive learning. This lightweight AI assistant teaches you about audio technology "
+        f"through natural conversation!"
     )
-    
+
     return build_response(
         speech_text,
-        card_title="BEA Educational Status",
-        card_content=f"Status: {capabilities['status']}\nTopics: {len(capabilities['available_topics'])}\nModes: {len(capabilities['learning_modes'])}"
+        card_title="T.A.N.Y.A. Status (Powered by BEA)",
+        card_content=f"T.A.N.Y.A. Status: {capabilities['status']}\nBEA-Powered Intelligence\nTopics: {len(capabilities['available_topics'])}\nModes: {len(capabilities['learning_modes'])}"
     )
+
+def handle_tiny_ai_status():
+    """Legacy function - redirects to handle_tanya_status() for backward compatibility"""
+    return handle_tanya_status()
 
 def handle_emotional_state(slots):
     """Handle emotional state education"""

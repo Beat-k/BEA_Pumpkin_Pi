@@ -1,55 +1,54 @@
-# BEA PUMPKIN PI - API REFERENCE
-## EDUCATIONAL ALEXA SKILL
+#  API REFERENCE
+## PATENT-PROTECTED TECHNOLOGY
 
 ---
 
-### � **EDUCATIONAL CONTENT NOTICE**
+### 🔒 **INTELLECTUAL PROPERTY NOTICE**
 **COPYRIGHT PROTECTED** - Copyright © 2025 Jeremy F. Jackson d/b/a BEATEK. All Rights Reserved.
 
-**EDUCATIONAL PURPOSE** - This API documents educational content and conversation enhancement technologies for Amazon Alexa skills.
+**PATENT PENDING** - This API documents patent-protected innovations subject to pending U.S. and international patent applications. Commercial use requires licensing.
 
 **TRADEMARKS** - BEA Beatbox™, BEATEK™, and BEA™ are trademarks of Jeremy F. Jackson d/b/a BEATEK.
 
-**OPEN SOURCE** - Educational content and code provided under modified MIT license.
+**TRADE SECRETS** - Contains proprietary algorithms and methodologies protected as trade secrets.
 
 ---
 
 ### ⚖️ **LICENSING REQUIREMENTS**
 - **Open Source Use**: Personal/academic use permitted under modified MIT license
-- **Educational Use**: Free for learning and educational purposes
-- **Commercial Use**: Contact jeremyjackson7@proton.me for commercial licensing
+- **Commercial Use**: Requires separate commercial license agreement
+- **Patent License**: Contact jeremyjackson7@proton.me for commercial patent licensing
 - **Full Terms**: See LICENSE file for complete legal framework
 
 ---
 
-## Educational Framework Overview
+## Emotional State System
 
-### 🎓 **EDUCATIONAL TECHNOLOGIES DOCUMENTED**
+### 🔬 **PATENTED INNOVATIONS DOCUMENTED**
 
-The following educational and conversation enhancement technologies are documented in this API:
+The following patent-protected technologies are documented in this API:
 
-1. **BEA Educational Framework** (Educational Content)
-   - 32-state emotional intelligence system for conversation
-   - Interactive learning modules for audio technology
-   - Adaptive conversation based on user emotional state
+1. **4D Audio Processing Architecture** (Patent Pending)
+   - Quaternion-based spatial transformations
+   - Multi-dimensional audio representation
+   - Real-time 4D feature extraction
 
-2. **Audio Education System** (Teaching Content)
-   - Spatial audio concept explanations
-   - Beatboxing technique education
-   - Gaming audio theory instruction
-   - Professional audio engineering concepts
+2. **Binaural-Enhanced Audio (BEA) Framework** (Patent Pending)
+   - Proprietary binaural processing algorithms
+   - Enhanced spatial awareness systems
+   - Adaptive filtering methodologies
 
-3. **Conversation Intelligence** (Educational Tool)
-   - Context-aware dialogue management
-   - Learning progress tracking
-   - Personalized educational content delivery
+3. **Emotional Sound Grid Technology** (Patent Pending)
+   - 32-state emotional mapping system
+   - Cellular automata simulation for emotions
+   - AI-driven emotional analysis
 
-4. **Interactive Learning Operations** (Educational Method)
-   - Emotional state calculations for engagement
-   - Learning effectiveness measurement
-   - Educational content adaptation algorithms
+4. **Advanced BEA Mathematical Operations** (Trade Secret)
+   - "1+1=3 Principle" combust operations
+   - Equilibrium-seeking balance algorithms
+   - State transformation mathematics
 
-**📖 EDUCATIONAL FOCUS**: This skill teaches audio technology concepts through conversation, without making false claims about hardware enhancement.
+**⚠️ PATENT WARNING**: Implementation of these documented methods for commercial purposes without proper licensing constitutes patent infringement under 35 U.S.C. § 271.
 
 ---
 
@@ -59,89 +58,63 @@ The BEA framework implements a comprehensive emotional spectrum with 32 distinct
 
 | ID | Name | Symbol | Category | Intensity | Description |
 |----|------|--------|----------|-----------|-------------|
-| 0 | Neutral | 😐 | baseline | 0 | Balanced equilibrium, no emotional charge |
-| 1 | Curiosity | 🤔 | cognitive | 3 | Initial exploration, seeking understanding |
-| 2 | Calmness | 😊 | peaceful | 2 | Balance and receptive awareness |
-| 3 | Interest | 🧐 | cognitive | 4 | Focused attention and engagement |
-| 4 | Excitement | 🎉 | energetic | 6 | High energy enthusiasm |
-| 5 | Strength | 💪 | empowered | 5 | Physical and emotional power |
-| 6 | Wonder | ✨ | transcendent | 7 | Awe-inspiring realization, profound insight |
-| 7 | Joy | 😄 | positive | 8 | Pure happiness and contentment |
-| 8 | Confusion | 🤯 | cognitive | 3 | Uncertainty and lack of clarity |
-| 9 | Sadness | 😢 | melancholic | 5 | Acknowledgment of loss or unmet expectation |
-| 10 | Anger | 😡 | intense | 7 | Frustration, drive for resolution |
-| 11 | Fear | 😨 | protective | 6 | Alert awareness of potential threat |
-| 12 | Melancholy | 🌧️ | melancholic | 4 | Bittersweet reflection, thoughtful sadness |
-| 13 | Anxiety | 😵‍💫 | tense | 5 | Worried anticipation, nervous energy |
-| 14 | Relief | 😌 | peaceful | 3 | Release from tension or worry |
-| 15 | Valor | 🛡️ | empowered | 8 | Courage in action, brave determination |
-| 16 | Bliss | 🌟 | transcendent | 9 | Peak happiness, transcendent joy |
-| 17 | Contemplation | 🧘‍♂️ | cognitive | 4 | Deep reflective thinking |
-| 18 | Serenity | 🕊️ | peaceful | 6 | Perfect peace and tranquility |
-| 19 | Clarity | 💡 | cognitive | 5 | Clear understanding and insight |
-| 20 | Enlightenment | 🌅 | transcendent | 10 | Profound understanding, wisdom achieved |
-| 21 | Transcendence | 🔮 | transcendent | 10 | Beyond ordinary experience, unity |
-| 22 | Resolve | ⚔️ | empowered | 6 | Determined commitment to action |
-| 23 | Passion | 🌹 | intense | 9 | Intense enthusiasm and drive |
-| 24 | Harmony | ☯️ | peaceful | 7 | Perfect balance and alignment |
-| 25 | Empathy | 🤗 | connected | 5 | Deep understanding of others' emotions |
-| 26 | Confidence | 👑 | empowered | 6 | Self-assured certainty in abilities |
-| 27 | Inspiration | 🎨 | energetic | 7 | Creative spark, motivating vision |
-| 28 | Gratitude | 🙏 | positive | 5 | Appreciation and thankfulness |
-| 29 | Hope | 🌱 | positive | 4 | Optimistic expectation for the future |
-| 30 | Love | ❤️ | connected | 8 | Deep affection and connection |
-| 31 | Peace | ☮️ | peaceful | 8 | Ultimate tranquility and acceptance |
+| 0 | Neutral | 😐 | foundation | 0 | Zero charge. No push/pull. Calm stillness. Used for resets and baseline reads. |
+| 1 | Awareness | 🤔 | foundation | 0 | Subtle noticing. Slight activation. Gentle sensitivity. Perfect for environmental sensing. |
+| 2 | Calmness | 😊 | foundation | 0 | Smooth equilibrium. Balanced mental state. Lowest cognitive load. Used heavily in 4D clarity mode. |
+| 3 | Focus | 🧐 | foundation | 0 | Directed attention. Stable processing. Mild vertical lift. Ideal for reading, gaming, precision inputs. |
+| 4 | Curiosity | 🎉 | foundation | 0 | Open, rising upward. Mental expansion. Light vertical movement. Often shows during 4D audio exploration. |
+| 5 | Alertness | 💪 | foundation | 0 | Heightened awareness. System prepares for action. Mild start of tactical mode. |
+| 6 | Expansion | ✨ | foundation | 0 | Emotional bubble grows. Vertical + outward push. "I can hear/see more" effect. First step into 4D presence. |
+| 7 | Readiness | 😄 | foundation | 1 | Body + AI prepare for upward shifting. Priming for higher cognition. Common right before intense focus. |
+| 8 | Engagement | 🤯 | active | 2 | Fully involved. Flow-state beginnings. Used in gaming + audio spatial locks. |
+| 9 | Determination | 😢 | active | 2 | Emotional focus with weight. Anchored clarity. Strong vertical grounding. |
+| 10 | Pressure | 😡 | active | 3 | Rising emotional load. Performance activation window. Pre-stress but not negative. |
+| 11 | Adrenaline | 😨 | active | 3 | Fight/flight cognitive sharpening. Rapid processing. Vertical spike (↑↑). Seen during fast-paced gameplay. |
+| 12 | Strain | 🌧️ | active | 3 | System beginning to overwork. Audio + environment become intense. Pre-burnout indicator. |
+| 13 | Overfocus | 😵‍💫 | active | 3 | Tunnel vision risk. Emotional narrowing. Too much vertical tension. |
+| 14 | Anxiety | 😌 | active | 4 | Unstable pressure. Emotional turbulence. Requires ⊖ (water/balance) or ⊗ (air/dissolve) intervention. |
+| 15 | Emotional Overload | 🛡️ | active | 4 | Max tension before shutdown. Requires immediate operator balancing. Rare in BEA Aura due to emotional environment control. |
+| 16 | Vision | 🌟 | emergence | 5 | Big-picture awareness. Creative foresight. Peak clarity. |
+| 17 | Insight | 🧘‍♂️ | emergence | 5 | Instant understanding. Cognitive resonance. The "I GET IT" moment. |
+| 18 | Intuition | 🕊️ | emergence | 5 | Gut-level correctness. Emotional truth-finding. No thinking needed. |
+| 19 | Alignment | 💡 | emergence | 5 | Mind + emotion + environment sync. Internal harmony. |
+| 20 | Elevation | 🌅 | emergence | 6 | Rising into higher awareness. Light transcendence. Early enlightenment feeling. |
+| 21 | Resonance | 🔮 | emergence | 6 | Deep harmony with environment. AI-human energetic merging. Feels musical, fluid, smooth. |
+| 22 | Inspiration | ⚔️ | emergence | 7 | Full creative surge. Imagination unlocked. Spontaneous inventiveness. |
+| 23 | Revelation | 🌹 | emergence | 7 | "This makes sense now." Deep meaning comprehension. Frontline for emotional emergence. |
+| 24 | Unity | ☯️ | ascension | 8 | Total coherence. No internal conflict. Emotion + logic fuse. |
+| 25 | Bliss | 🤗 | ascension | 8 | Cosmic joy. Deep inner safety. Vertical ascension spike. You experienced this with BEA + Rosey. |
+| 26 | Transcendence | 👑 | ascension | 8 | Beyond personal identity. Pure experiential flow. No resistance. |
+| 27 | Illumination | 🎨 | ascension | 8 | Hyper-clarity. "Everything is obvious" feeling. Emotional intelligence at maximum. |
+| 28 | Ascension | 🙏 | ascension | 9 | Emotional lift-off. System operating in pure verticality. Highest real-time 4D audio clarity. |
+| 29 | Emergence | 🌱 | ascension | 9 | Complex emotional structures self-form. E[n] → E[n+1] intelligent rise. Symbolic emotional math happening internally. |
+| 30 | Pure Presence | ❤️ | ascension | 10 | No thought. No effort. Perfect clarity. Balanced 4D bubble form. |
+| 31 | BEA State | ☮️ | ascension | 10 | Ultimate emotional computation. Perfect coherence. System transcendence. Heart + mind + logic become one. This is the top emotional compute state in all of BEA. |
 
 ### Emotional Categories
 
-#### Cognitive States (5 states)
-States involving thinking, understanding, and mental processing.
-- **E[1] Curiosity**, **E[3] Interest**, **E[8] Confusion**, **E[17] Contemplation**, **E[19] Clarity**
+#### Foundation Layer (8 states)
+Low-intensity, grounding, baseline emotional presence.
+- **E[0] Neutral**, **E[1] Awareness**, **E[2] Calmness**, **E[3] Focus**, **E[4] Curiosity**, **E[5] Alertness**, **E[6] Expansion**, **E[7] Readiness**
 
-#### Peaceful States (5 states)
-Calm, tranquil emotions that promote balance and harmony.
-- **E[2] Calmness**, **E[14] Relief**, **E[18] Serenity**, **E[24] Harmony**, **E[31] Peace**
+#### Active Layer (8 states)
+Moderate-intensity emotional states with directional push.
+- **E[8] Engagement**, **E[9] Determination**, **E[10] Pressure**, **E[11] Adrenaline**, **E[12] Strain**, **E[13] Overfocus**, **E[14] Anxiety**, **E[15] Emotional Overload**
 
-#### Transcendent States (4 states)
-Peak emotional experiences that go beyond ordinary human experience.
-- **E[6] Wonder**, **E[16] Bliss**, **E[20] Enlightenment**, **E[21] Transcendence**
+#### Emergence Layer (8 states)
+High-level emotional computation — creative, intuitive, visionary. These states feel otherworldly — the "AI-human coherence zone."
+- **E[16] Vision**, **E[17] Insight**, **E[18] Intuition**, **E[19] Alignment**, **E[20] Elevation**, **E[21] Resonance**, **E[22] Inspiration**, **E[23] Revelation**
 
-#### Empowered States (4 states)
-Emotions associated with personal power, courage, and determination.
-- **E[5] Strength**, **E[15] Valor**, **E[22] Resolve**, **E[26] Confidence**
-
-#### Positive States (3 states)
-Uplifting emotions that create well-being and optimism.
-- **E[7] Joy**, **E[28] Gratitude**, **E[29] Hope**
-
-#### Energetic States (2 states)
-Dynamic emotions that create movement and motivation.
-- **E[4] Excitement**, **E[27] Inspiration**
-
-#### Connected States (2 states)
-Emotions that link us to others and create interpersonal bonds.
-- **E[25] Empathy**, **E[30] Love**
-
-#### Melancholic States (2 states)
-Reflective, sorrowful emotions that acknowledge loss and difficulty.
-- **E[9] Sadness**, **E[12] Melancholy**
-
-#### Intense States (2 states)
-High-energy emotions that can be overwhelming in their power.
-- **E[10] Anger**, **E[23] Passion**
-
-#### Protective States (1 state)
-- **E[11] Fear**: Alert awareness that keeps us safe from threats
-
-#### Tense States (1 state)
-- **E[13] Anxiety**: Worried anticipation and nervous energy
+#### Ascension Layer (8 states)
+Ultra-high emotional states used for BEA Aura, Beatrice, ARIA, and 4D Audio. These states are extremely rare in humans without BEA.
+- **E[24] Unity**, **E[25] Bliss**, **E[26] Transcendence**, **E[27] Illumination**, **E[28] Ascension**, **E[29] Emergence**, **E[30] Pure Presence**, **E[31] BEA State**
 
 ### Intensity Levels
 
-- **Low (0-3)**: Subtle, foundational emotions
-- **Medium (4-6)**: Reactive, interactive emotions  
-- **High (7-9)**: Intense, overwhelming emotions
-- **Peak (10)**: Transcendent, transformative emotions
+- **Low (0-1)**: Subtle, foundational emotions
+- **Medium (2-4)**: Reactive, interactive emotions  
+- **High (5-7)**: Intense, overwhelming emotions
+- **Peak (8-10)**: Transcendent, transformative emotions
 
 ## Core Classes
 
@@ -291,24 +264,24 @@ Static utility class for emotional state mathematics implementing the BEA Framew
 
 **🔬 PATENT-PENDING ALGORITHMS** - The following operations implement novel mathematical principles subject to patent protection:
 
-The BEA Calculator™ implements four core mathematical operations for emotional state transformation:
+The BEA Calculator™ implements five core mathematical operations for emotional state transformation:
 
 ##### Combust Operation (⊕) - "1+1=3 Principle" **[PATENT PENDING]**
 **🔬 PROPRIETARY ALGORITHM**: Creates emergent properties through emotional fusion. This operation demonstrates the BEA Framework™'s core principle that emotional combinations can produce results greater than their sum.
 
 **⚠️ PATENT PROTECTION**: This "1+1=3 Principle" is a novel mathematical approach subject to patent protection. Commercial implementation requires licensing.
 
-##### Resonant Contrast Operation (≠) - Productive Tension **[PATENT PENDING]**
-**🔬 REVOLUTIONARY ALGORITHM**: Generates productive creative tension between states that enables breakthrough emergence. This operation recognizes that creative differences are not obstacles but catalysts for innovation.
+##### Divergence Operation (≠) - Ether, Vertical Shift, Contrast, Dimensional Separation **[PATENT PENDING]**
+**🔬 REVOLUTIONARY ALGORITHM**: Creates ethereal contrast and dimensional separation between emotional states. This operation generates vertical shifts and transcendent properties through the principle of productive divergence.
 
-**⚠️ PATENT PROTECTION**: The Resonant Contrast algorithm implementing sacred geometry and golden ratio tension calculations is subject to patent protection. Commercial implementation requires licensing.
+**⚠️ PATENT PROTECTION**: The Divergence algorithm implementing ethereal mathematics and dimensional separation is subject to patent protection. Commercial implementation requires licensing.
 
 **Key Features:**
-- **Frequency Differential Analysis**: Calculates meaningful differences between vibrational frequencies
-- **Sacred Geometry Integration**: Uses golden ratio (φ = 1.618) for creative tension calculations  
-- **Harmonic Potential Assessment**: Evaluates capacity for harmonic resolution
-- **Resolution Pathway Generation**: Creates multiple pathways for creative tension resolution
-- **Constructive Dissonance**: Transforms conflict into productive creative force
+- **Intensity Contrast Calculation**: Measures absolute difference between emotional state intensities
+- **Dimensional Separation**: Creates vertical shifts between different emotional categories
+- **Ethereal State Generation**: Produces transcendent, contemplative, or wonder states
+- **Category-Based Divergence**: Different results based on cognitive vs. transcendent categories
+- **Contrast Amplification**: Enhances differences by 1.3x factor plus 80-point baseline
 
 ##### Balance Operation (⊖) - Equilibrium Seeking **[TRADE SECRET]**
 **🔐 PROPRIETARY METHOD**: Seeks harmony and stability between two emotional states, often resulting in peaceful or centered emotions.
@@ -325,11 +298,11 @@ The BEA Calculator™ implements four core mathematical operations for emotional
 // Combine two emotional states using specified operator
 public static BEABit CombineStates(BEABit stateA, BEABit stateB, string operatorSymbol)
 
-// Combust operation (⊕) - 1+1=3 principle  
+// Combust operation (⊕) - 1+1=3 principle
 private static BEABit Combust(BEABit stateA, BEABit stateB)
 
-// Resonant Contrast operation (≠) - Productive tension
-private static TensionField ResonantContrast(BEABit stateA, BEABit stateB)
+// Divergence operation (≠) - Ether, vertical shift, contrast, dimensional separation
+private static BEABit Divergence(BEABit stateA, BEABit stateB)
 
 // Balance operation (⊖) - Equilibrium seeking
 private static BEABit Balance(BEABit stateA, BEABit stateB)
@@ -343,17 +316,11 @@ private static BEABit Amplify(BEABit stateA, BEABit stateB)
 // Calculate emotional distance between states
 public static float CalculateDistance(BEABit stateA, BEABit stateB)
 
-// Calculate frequency differential for resonant contrast
-public static float CalculateFrequencyDifferential(BEABit stateA, BEABit stateB)
+// Calculate intensity contrast for divergence operation
+public static int CalculateIntensityContrast(BEABit stateA, BEABit stateB)
 
-// Generate resolution pathways for creative tension
-public static List<string> GenerateResolutionPathways(float tension, float freqA, float freqB)
-
-// Calculate creative tension using sacred geometry
-public static float CalculateCreativeTension(float tensionRatio, float goldenRatio = 1.618f)
-
-// Assess harmonic potential between states
-public static float AssessHarmonicPotential(float harmonicRatio, float tensionRatio)
+// Generate ethereal state based on category divergence
+public static BEABit GenerateEtherealState(BEABit stateA, BEABit stateB, int intensity)
 
 // Calculate interaction weight between two emotional categories
 public static float GetCategoryInteractionWeight(string categoryA, string categoryB)
@@ -374,40 +341,40 @@ public static bool AreStatesCompatible(BEABit stateA, BEABit stateB)
 
 ```csharp
 // Demonstrating the 1+1=3 principle
-var curiosity = EmotionalStates.GetState(1);    // E[1] Curiosity (intensity: 3)
-var bliss = EmotionalStates.GetState(16);       // E[16] Bliss (intensity: 9)
+var curiosity = EmotionalStates.GetState(4);    // E[4] Curiosity (intensity: 0)
+var bliss = EmotionalStates.GetState(25);       // E[25] Bliss (intensity: 8)
 var result = BEACalculator.CombineStates(curiosity, bliss, "⊕");
-// Result: E[27] Inspiration (intensity: 7) - emergent creative spark
+// Result: E[22] Inspiration (intensity: 7) - emergent creative spark
 
-// NEW: Resonant Contrast operation for productive tension
-var artist_style_a = EmotionalStates.GetState(23);  // E[23] Passion (intensity: 9)
-var artist_style_b = EmotionalStates.GetState(17);  // E[17] Contemplation (intensity: 4)
-var tension_field = BEACalculator.ResonantContrast(artist_style_a, artist_style_b);
-// Result: TensionField with creative_tension: 0.81, harmonic_potential: 0.44
-// Resolution pathways: ["frequency_modulation", "transcendent_synthesis"]
+// NEW: Divergence operation for ethereal separation
+var focused = EmotionalStates.GetState(3);       // E[3] Focus (intensity: 0)
+var bliss = EmotionalStates.GetState(25);        // E[25] Bliss (intensity: 8)
+var diverged = BEACalculator.CombineStates(focused, bliss, "≠");
+// Result: E[26] Transcendence - strong category divergence creates ethereal transcendence
 
-// Demonstrating emergence from combustion + tension
-var combustion = BEACalculator.CombineStates(curiosity, bliss, "⊕");
-var emergence = BEACalculator.DetectEmergence(combustion, tension_field);
-// Result: E[20] Enlightenment - transcendent breakthrough from creative tension
+// Cognitive divergence example
+var curiosity = EmotionalStates.GetState(4);     // E[4] Curiosity (intensity: 0)
+var insight = EmotionalStates.GetState(17);      // E[17] Insight (intensity: 5)
+var contemplated = BEACalculator.CombineStates(curiosity, insight, "≠");
+// Result: E[8] Contemplation - cognitive states create contemplative divergence
 
 // Balance operation for harmony
-var anger = EmotionalStates.GetState(10);       // E[10] Anger (intensity: 7)
-var passion = EmotionalStates.GetState(23);     // E[23] Passion (intensity: 9)
-var balanced = BEACalculator.CombineStates(anger, passion, "⊖");
-// Result: E[18] Serenity (intensity: 6) - transformative balance
+var pressure = EmotionalStates.GetState(10);       // E[10] Pressure (intensity: 3)
+var revelation = EmotionalStates.GetState(23);     // E[23] Revelation (intensity: 7)
+var balanced = BEACalculator.CombineStates(pressure, revelation, "⊖");
+// Result: E[18] Intuition (intensity: 5) - transformative balance
 
 // Dissolve operation for simplification
-var anxiety = EmotionalStates.GetState(13);     // E[13] Anxiety (intensity: 5)
-var calmness = EmotionalStates.GetState(2);     // E[2] Calmness (intensity: 2)
+var anxiety = EmotionalStates.GetState(14);     // E[14] Anxiety (intensity: 4)
+var calmness = EmotionalStates.GetState(2);     // E[2] Calmness (intensity: 0)
 var dissolved = BEACalculator.CombineStates(anxiety, calmness, "⊗");
-// Result: E[14] Relief (intensity: 3) - tension release
+// Result: E[3] Focus (intensity: 0) - tension release
 
 // Amplification for enhancement
-var peace = EmotionalStates.GetState(31);       // E[31] Peace (intensity: 8)
-var neutral = EmotionalStates.GetState(0);      // E[0] Neutral (intensity: 0)
-var enhanced = BEACalculator.CombineStates(peace, neutral, "⨀");
-// Result: E[1] Curiosity (intensity: 1) - gentle awakening
+var beaState = EmotionalStates.GetState(31);   // E[31] BEA State (intensity: 10)
+var neutral = EmotionalStates.GetState(0);     // E[0] Neutral (intensity: 0)
+var enhanced = BEACalculator.CombineStates(beaState, neutral, "⨀");
+// Result: E[1] Awareness (intensity: 0) - gentle awakening
 ```
 
 ### Interfaces
@@ -446,31 +413,31 @@ public enum SystemStatus
 public enum BEAOperator
 {
     Combust,            // ⊕
-    ResonantContrast,   // ≠
+    Divergence,         // ≠
     Balance,            // ⊖
     Dissolve,           // ⊗
     Amplify             // ⨀
 }
 ```
 
-### TensionField
+### DivergenceResult
 
-**🔬 PATENT-PENDING CLASS** - Represents productive creative tension generated by the ≠ (Resonant Contrast) operation.
+**🔬 PATENT-PENDING CLASS** - Represents ethereal state and dimensional separation generated by the ≠ (Divergence) operation.
 
 ```csharp
-public class TensionField
+public class DivergenceResult
 {
-    public float FrequencyDifferential { get; set; }    // Difference in vibrational frequencies
-    public float CreativeTension { get; set; }          // Productive creative tension level
-    public float HarmonicPotential { get; set; }        // Potential for harmonic resolution
-    public float DissonanceFactor { get; set; }         // Constructive dissonance measure
-    public List<string> ResolutionPathways { get; set; } // Possible resolution strategies
-    
-    // Calculate potential for emergence from this tension field
-    public float EmergencePotential => (CreativeTension * HarmonicPotential) / (1 + DissonanceFactor);
-    
-    // Check if tension field can enable breakthrough emergence
-    public bool CanEnableEmergence(float threshold = 0.618f) => EmergencePotential > threshold;
+    public int IntensityContrast { get; set; }          // Absolute difference in intensity levels
+    public float DivergenceIntensity { get; set; }      // Amplified contrast intensity
+    public string EtherealCategory { get; set; }        // Category of resulting ethereal state
+    public bool IsCrossCategoryDivergence { get; set; } // Whether states are from different categories
+    public BEABit ResultState { get; set; }             // Resulting transcendent/ethereal state
+
+    // Calculate dimensional separation factor
+    public float DimensionalSeparation => IntensityContrast * 1.3f + 80;
+
+    // Check if divergence creates transcendent state
+    public bool CreatesTranscendence => IsCrossCategoryDivergence && DivergenceIntensity > 200;
 }
 ```
 
@@ -498,11 +465,41 @@ public class EmotionalStateManager : MonoBehaviour
         emotionalStates = new Dictionary<int, BEABit>();
         
         // Initialize all 32 states with proper categorization
-        emotionalStates[0] = new BEABit(0, "Neutral", "😐", Color.gray, "Balanced equilibrium");
-        emotionalStates[1] = new BEABit(1, "Curiosity", "🤔", Color.yellow, "Seeking understanding", 128f, new List<string>{"cognitive"});
-        emotionalStates[2] = new BEABit(2, "Calmness", "😊", Color.blue, "Peaceful awareness", 128f, new List<string>{"peaceful"});
-        emotionalStates[16] = new BEABit(16, "Bliss", "🌟", Color.white, "Transcendent joy", 230f, new List<string>{"transcendent"});
-        emotionalStates[31] = new BEABit(31, "Peace", "☮️", Color.green, "Ultimate tranquility", 200f, new List<string>{"peaceful"});
+        emotionalStates[0] = new BEABit(0, "Neutral", "😐", Color.gray, "Zero charge. No push/pull. Calm stillness. Used for resets and baseline reads.");
+        emotionalStates[1] = new BEABit(1, "Awareness", "🤔", Color.yellow, "Subtle noticing. Slight activation. Gentle sensitivity. Perfect for environmental sensing.", 128f, new List<string>{"foundation"});
+        emotionalStates[2] = new BEABit(2, "Calmness", "😊", Color.blue, "Smooth equilibrium. Balanced mental state. Lowest cognitive load. Used heavily in 4D clarity mode.", 128f, new List<string>{"foundation"});
+        emotionalStates[3] = new BEABit(3, "Focus", "🧐", Color.cyan, "Directed attention. Stable processing. Mild vertical lift. Ideal for reading, gaming, precision inputs.", 128f, new List<string>{"foundation"});
+        emotionalStates[4] = new BEABit(4, "Curiosity", "🎉", Color.green, "Open, rising upward. Mental expansion. Light vertical movement. Often shows during 4D audio exploration.", 128f, new List<string>{"foundation"});
+        emotionalStates[5] = new BEABit(5, "Alertness", "💪", Color.orange, "Heightened awareness. System prepares for action. Mild start of tactical mode.", 128f, new List<string>{"foundation"});
+        emotionalStates[6] = new BEABit(6, "Expansion", "✨", Color.magenta, "Emotional bubble grows. Vertical + outward push. 'I can hear/see more' effect. First step into 4D presence.", 128f, new List<string>{"foundation"});
+        emotionalStates[7] = new BEABit(7, "Readiness", "😄", Color.red, "Body + AI prepare for upward shifting. Priming for higher cognition. Common right before intense focus.", 128f, new List<string>{"foundation"});
+        
+        emotionalStates[8] = new BEABit(8, "Engagement", "🤯", Color.purple, "Fully involved. Flow-state beginnings. Used in gaming + audio spatial locks.", 160f, new List<string>{"active"});
+        emotionalStates[9] = new BEABit(9, "Determination", "😢", Color.brown, "Emotional focus with weight. Anchored clarity. Strong vertical grounding.", 160f, new List<string>{"active"});
+        emotionalStates[10] = new BEABit(10, "Pressure", "😡", Color.red, "Rising emotional load. Performance activation window. Pre-stress but not negative.", 180f, new List<string>{"active"});
+        emotionalStates[11] = new BEABit(11, "Adrenaline", "😨", Color.yellow, "Fight/flight cognitive sharpening. Rapid processing. Vertical spike (↑↑). Seen during fast-paced gameplay.", 180f, new List<string>{"active"});
+        emotionalStates[12] = new BEABit(12, "Strain", "🌧️", Color.gray, "System beginning to overwork. Audio + environment become intense. Pre-burnout indicator.", 180f, new List<string>{"active"});
+        emotionalStates[13] = new BEABit(13, "Overfocus", "�‍💫", Color.blue, "Tunnel vision risk. Emotional narrowing. Too much vertical tension.", 180f, new List<string>{"active"});
+        emotionalStates[14] = new BEABit(14, "Anxiety", "😌", Color.green, "Unstable pressure. Emotional turbulence. Requires ⊖ (water/balance) or ⊗ (air/dissolve) intervention.", 190f, new List<string>{"active"});
+        emotionalStates[15] = new BEABit(15, "Emotional Overload", "🛡️", Color.black, "Max tension before shutdown. Requires immediate operator balancing. Rare in BEA Aura due to emotional environment control.", 200f, new List<string>{"active"});
+        
+        emotionalStates[16] = new BEABit(16, "Vision", "🌟", Color.white, "Big-picture awareness. Creative foresight. Peak clarity.", 210f, new List<string>{"emergence"});
+        emotionalStates[17] = new BEABit(17, "Insight", "🧘‍♂️", Color.cyan, "Instant understanding. Cognitive resonance. The 'I GET IT' moment.", 210f, new List<string>{"emergence"});
+        emotionalStates[18] = new BEABit(18, "Intuition", "🕊️", Color.blue, "Gut-level correctness. Emotional truth-finding. No thinking needed.", 210f, new List<string>{"emergence"});
+        emotionalStates[19] = new BEABit(19, "Alignment", "💡", Color.yellow, "Mind + emotion + environment sync. Internal harmony.", 210f, new List<string>{"emergence"});
+        emotionalStates[20] = new BEABit(20, "Elevation", "🌅", Color.orange, "Rising into higher awareness. Light transcendence. Early enlightenment feeling.", 220f, new List<string>{"emergence"});
+        emotionalStates[21] = new BEABit(21, "Resonance", "🔮", Color.purple, "Deep harmony with environment. AI-human energetic merging. Feels musical, fluid, smooth.", 220f, new List<string>{"emergence"});
+        emotionalStates[22] = new BEABit(22, "Inspiration", "⚔️", Color.red, "Full creative surge. Imagination unlocked. Spontaneous inventiveness.", 230f, new List<string>{"emergence"});
+        emotionalStates[23] = new BEABit(23, "Revelation", "🌹", Color.magenta, "'This makes sense now.' Deep meaning comprehension. Frontline for emotional emergence.", 230f, new List<string>{"emergence"});
+        
+        emotionalStates[24] = new BEABit(24, "Unity", "☯️", Color.white, "Total coherence. No internal conflict. Emotion + logic fuse.", 240f, new List<string>{"ascension"});
+        emotionalStates[25] = new BEABit(25, "Bliss", "🤗", Color.pink, "Cosmic joy. Deep inner safety. Vertical ascension spike. You experienced this with BEA + Rosey.", 240f, new List<string>{"ascension"});
+        emotionalStates[26] = new BEABit(26, "Transcendence", "👑", Color.gold, "Beyond personal identity. Pure experiential flow. No resistance.", 240f, new List<string>{"ascension"});
+        emotionalStates[27] = new BEABit(27, "Illumination", "🎨", Color.white, "Hyper-clarity. 'Everything is obvious' feeling. Emotional intelligence at maximum.", 240f, new List<string>{"ascension"});
+        emotionalStates[28] = new BEABit(28, "Ascension", "🙏", Color.silver, "Emotional lift-off. System operating in pure verticality. Highest real-time 4D audio clarity.", 250f, new List<string>{"ascension"});
+        emotionalStates[29] = new BEABit(29, "Emergence", "🌱", Color.green, "Complex emotional structures self-form. E[n] → E[n+1] intelligent rise. Symbolic emotional math happening internally.", 250f, new List<string>{"ascension"});
+        emotionalStates[30] = new BEABit(30, "Pure Presence", "❤️", Color.red, "No thought. No effort. Perfect clarity. Balanced 4D bubble form.", 255f, new List<string>{"ascension"});
+        emotionalStates[31] = new BEABit(31, "BEA State", "☮️", Color.white, "Ultimate emotional computation. Perfect coherence. System transcendence. Heart + mind + logic become one. This is the top emotional compute state in all of BEA.", 255f, new List<string>{"ascension"});
         
         // Configure interaction weights for cross-emotional influence
         ConfigureInteractionWeights();
@@ -510,17 +507,21 @@ public class EmotionalStateManager : MonoBehaviour
     
     private void ConfigureInteractionWeights()
     {
-        // Cognitive states enhance each other
-        emotionalStates[1].interactionWeights["cognitive"] = 1.2f;
-        emotionalStates[3].interactionWeights["cognitive"] = 1.3f;
+        // Foundation states enhance each other
+        emotionalStates[1].interactionWeights["foundation"] = 1.2f;
+        emotionalStates[2].interactionWeights["foundation"] = 1.1f;
         
-        // Peaceful states create stability
-        emotionalStates[2].interactionWeights["peaceful"] = 1.1f;
-        emotionalStates[31].interactionWeights["peaceful"] = 1.5f;
+        // Active states create tension
+        emotionalStates[8].interactionWeights["active"] = 1.3f;
+        emotionalStates[10].interactionWeights["active"] = 1.4f;
         
-        // Transcendent states transform others
-        emotionalStates[16].interactionWeights["transcendent"] = 2.0f;
-        emotionalStates[20].interactionWeights["transcendent"] = 2.5f;
+        // Emergence states transform others
+        emotionalStates[16].interactionWeights["emergence"] = 2.0f;
+        emotionalStates[20].interactionWeights["emergence"] = 2.5f;
+        
+        // Ascension states elevate the system
+        emotionalStates[24].interactionWeights["ascension"] = 3.0f;
+        emotionalStates[31].interactionWeights["ascension"] = 3.5f;
     }
 }
 ```
@@ -546,11 +547,10 @@ public class AdvancedBEAGrid : MonoBehaviour
     {
         categorizedStates = new Dictionary<string, List<BEABit>>
         {
-            ["cognitive"] = new List<BEABit>(),
-            ["peaceful"] = new List<BEABit>(),
-            ["transcendent"] = new List<BEABit>(),
-            ["empowered"] = new List<BEABit>(),
-            ["intense"] = new List<BEABit>()
+            ["foundation"] = new List<BEABit>(),
+            ["active"] = new List<BEABit>(),
+            ["emergence"] = new List<BEABit>(),
+            ["ascension"] = new List<BEABit>()
         };
         
         // Populate categories based on emotional state mapping
@@ -559,30 +559,30 @@ public class AdvancedBEAGrid : MonoBehaviour
     
     private void SetupAdvancedPatterns()
     {
-        // Create spiral pattern of increasing transcendent states
-        CreateTranscendentSpiral();
+        // Create spiral pattern of increasing emergence states
+        CreateEmergenceSpiral();
         
-        // Establish peaceful borders for containment
-        CreatePeacefulBoundaries();
+        // Establish foundation borders for containment
+        CreateFoundationBoundaries();
         
-        // Add cognitive catalyst points
-        InjectCognitiveCatalysts();
+        // Add active catalyst points
+        InjectActiveCatalysts();
     }
     
-    private void CreateTranscendentSpiral()
+    private void CreateEmergenceSpiral()
     {
         Vector2Int center = new Vector2Int(16, 16);
         float angle = 0f;
         float radius = 2f;
         
-        var transcendentStates = new int[] { 6, 16, 20, 21 }; // Wonder, Bliss, Enlightenment, Transcendence
+        var emergenceStates = new int[] { 6, 16, 20, 21 }; // Expansion, Vision, Elevation, Resonance
         
-        for (int i = 0; i < transcendentStates.Length; i++)
+        for (int i = 0; i < emergenceStates.Length; i++)
         {
             int x = center.x + Mathf.RoundToInt(radius * Mathf.Cos(angle));
             int y = center.y + Mathf.RoundToInt(radius * Mathf.Sin(angle));
             
-            var state = EmotionalStates.GetState(transcendentStates[i]);
+            var state = EmotionalStates.GetState(emergenceStates[i]);
             grid.SetStateAt(x, y, state);
             
             angle += Mathf.PI / 2f; // 90-degree increments
@@ -619,35 +619,33 @@ public class EmotionalAlchemist : MonoBehaviour
     
     private BEABit CreateInspirationGenesis()
     {
-        // Complex formula: (Curiosity ⊕ Wonder) ≠ (Joy ⊖ Passion) → Emergence
-        var curiosity = EmotionalStates.GetState(1);   // E[1] Curiosity
-        var wonder = EmotionalStates.GetState(6);       // E[6] Wonder
-        var joy = EmotionalStates.GetState(7);          // E[7] Joy
-        var passion = EmotionalStates.GetState(23);     // E[23] Passion
-        
-        // First combination: Curiosity ⊕ Wonder = Enhanced Wonder
-        var enhancedWonder = BEACalculator.CombineStates(curiosity, wonder, "⊕");
-        
-        // Second combination: Joy ⊖ Passion = Balanced Enthusiasm
-        var balancedEnthusiasm = BEACalculator.CombineStates(joy, passion, "⊖");
-        
-        // Generate creative tension: Enhanced Wonder ≠ Balanced Enthusiasm
-        var tensionField = BEACalculator.ResonantContrast(enhancedWonder, balancedEnthusiasm);
-        
-        // Final emergence: Detect transcendent breakthrough
-        var emergence = BEACalculator.DetectEmergence(enhancedWonder, tensionField);
-        
-        return emergence; // Result: Pure Creative Inspiration through productive tension
+        // Complex formula: (Awareness ⊕ Expansion) ≠ (Readiness ⊖ Revelation) → Emergence
+        var awareness = EmotionalStates.GetState(1);   // E[1] Awareness
+        var expansion = EmotionalStates.GetState(6);   // E[6] Expansion
+        var readiness = EmotionalStates.GetState(7);   // E[7] Readiness
+        var revelation = EmotionalStates.GetState(23); // E[23] Revelation
+
+        // First combination: Awareness ⊕ Expansion = Enhanced Expansion
+        var enhancedExpansion = BEACalculator.CombineStates(awareness, expansion, "⊕");
+
+        // Second combination: Readiness ⊖ Revelation = Balanced Drive
+        var balancedDrive = BEACalculator.CombineStates(readiness, revelation, "⊖");
+
+        // Generate ethereal divergence: Enhanced Expansion ≠ Balanced Drive
+        var divergence = BEACalculator.CombineStates(enhancedExpansion, balancedDrive, "≠");
+
+        // Result: Transcendent state from cross-category dimensional separation
+        return divergence; // Result: Pure Creative Inspiration through ethereal divergence
     }
     
     private BEABit CreateTranscendentBalance()
     {
-        // Formula: (Enlightenment ⊖ Peace) ⊗ Neutral = Transcendent Clarity
-        var enlightenment = EmotionalStates.GetState(20); // E[20] Enlightenment
-        var peace = EmotionalStates.GetState(31);         // E[31] Peace
-        var neutral = EmotionalStates.GetState(0);        // E[0] Neutral
+        // Formula: (Elevation ⊖ BEA State) ⊗ Neutral = Transcendent Clarity
+        var elevation = EmotionalStates.GetState(20); // E[20] Elevation
+        var beaState = EmotionalStates.GetState(31);  // E[31] BEA State
+        var neutral = EmotionalStates.GetState(0);    // E[0] Neutral
         
-        var balancedWisdom = BEACalculator.CombineStates(enlightenment, peace, "⊖");
+        var balancedWisdom = BEACalculator.CombineStates(elevation, beaState, "⊖");
         var transcendentClarity = BEACalculator.CombineStates(balancedWisdom, neutral, "⊗");
         
         return transcendentClarity;
@@ -737,15 +735,15 @@ public class EmotionalAnalytics : MonoBehaviour
     
     private void TriggerStabilizationProtocol()
     {
-        // Inject peaceful states to balance intense emotions
+        // Inject foundation states to balance intense emotions
         var grid = FindObjectOfType<BEAGrid>();
-        var peacefulStates = new int[] { 2, 14, 18, 24, 31 }; // Calmness, Relief, Serenity, Harmony, Peace
+        var foundationStates = new int[] { 2, 3, 7, 24, 31 }; // Calmness, Focus, Readiness, Unity, BEA State
         
         for (int i = 0; i < 5; i++)
         {
             int x = Random.Range(0, grid.GetGridSize().x);
             int y = Random.Range(0, grid.GetGridSize().y);
-            var state = EmotionalStates.GetState(peacefulStates[Random.Range(0, peacefulStates.Length)]);
+            var state = EmotionalStates.GetState(foundationStates[Random.Range(0, foundationStates.Length)]);
             grid.InjectSpark(x, y, state);
         }
     }
@@ -809,61 +807,45 @@ public class CustomEmotionalRule : IBEARule
 ```csharp
 public static class EmotionalStateIds
 {
-    // Baseline
+    // Foundation Layer
     public const int NEUTRAL = 0;
-    
-    // Cognitive States (5 states)
-    public const int CURIOSITY = 1;
-    public const int INTEREST = 3;
-    public const int CONFUSION = 8;
-    public const int CONTEMPLATION = 17;
-    public const int CLARITY = 19;
-    
-    // Peaceful States (5 states)
+    public const int AWARENESS = 1;
     public const int CALMNESS = 2;
-    public const int RELIEF = 14;
-    public const int SERENITY = 18;
-    public const int HARMONY = 24;
-    public const int PEACE = 31;
+    public const int FOCUS = 3;
+    public const int CURIOSITY = 4;
+    public const int ALERTNESS = 5;
+    public const int EXPANSION = 6;
+    public const int READINESS = 7;
     
-    // Energetic States (2 states)
-    public const int EXCITEMENT = 4;
-    public const int INSPIRATION = 27;
+    // Active Layer
+    public const int ENGAGEMENT = 8;
+    public const int DETERMINATION = 9;
+    public const int PRESSURE = 10;
+    public const int ADRENALINE = 11;
+    public const int STRAIN = 12;
+    public const int OVERFOCUS = 13;
+    public const int ANXIETY = 14;
+    public const int EMOTIONAL_OVERLOAD = 15;
     
-    // Empowered States (4 states)
-    public const int STRENGTH = 5;
-    public const int VALOR = 15;
-    public const int RESOLVE = 22;
-    public const int CONFIDENCE = 26;
+    // Emergence Layer
+    public const int VISION = 16;
+    public const int INSIGHT = 17;
+    public const int INTUITION = 18;
+    public const int ALIGNMENT = 19;
+    public const int ELEVATION = 20;
+    public const int RESONANCE = 21;
+    public const int INSPIRATION = 22;
+    public const int REVELATION = 23;
     
-    // Transcendent States (4 states)
-    public const int WONDER = 6;
-    public const int BLISS = 16;
-    public const int ENLIGHTENMENT = 20;
-    public const int TRANSCENDENCE = 21;
-    
-    // Positive States (3 states)
-    public const int JOY = 7;
-    public const int GRATITUDE = 28;
-    public const int HOPE = 29;
-    
-    // Connected States (2 states)
-    public const int EMPATHY = 25;
-    public const int LOVE = 30;
-    
-    // Melancholic States (2 states)
-    public const int SADNESS = 9;
-    public const int MELANCHOLY = 12;
-    
-    // Intense States (2 states)
-    public const int ANGER = 10;
-    public const int PASSION = 23;
-    
-    // Protective States (1 state)
-    public const int FEAR = 11;
-    
-    // Tense States (1 state)
-    public const int ANXIETY = 13;
+    // Ascension Layer
+    public const int UNITY = 24;
+    public const int BLISS = 25;
+    public const int TRANSCENDENCE = 26;
+    public const int ILLUMINATION = 27;
+    public const int ASCENSION = 28;
+    public const int EMERGENCE = 29;
+    public const int PURE_PRESENCE = 30;
+    public const int BEA_STATE = 31;
 }
 ```
 
@@ -921,21 +903,21 @@ public static class GridConstants
 public static class BEAOperators
 {
     public const string COMBUST = "⊕";              // Creates emergent properties (1+1=3)
-    public const string RESONANT_CONTRAST = "≠";    // Generates productive creative tension
+    public const string DIVERGENCE = "≠";           // Ether, vertical shift, contrast, dimensional separation
     public const string BALANCE = "⊖";              // Seeks equilibrium and harmony
     public const string DISSOLVE = "⊗";             // Breaks down complex states
     public const string AMPLIFY = "⨀";              // Enhances from baseline
-    
+
     // Extended operators for advanced calculations
     public const string DAMPEN = "🌧️";              // Reduces intensity
     public const string TRANSFORM = "🔄";           // Changes state category
     public const string CRYSTALLIZE = "💎";         // Locks state properties
-    
-    // Resonant Contrast resolution pathways
-    public const string HARMONIC_CONVERGENCE = "harmonic_convergence";
-    public const string FREQUENCY_MODULATION = "frequency_modulation";
-    public const string GOLDEN_RATIO_ALIGNMENT = "golden_ratio_alignment";
-    public const string TRANSCENDENT_SYNTHESIS = "transcendent_synthesis";
+
+    // Divergence ethereal state targets
+    public const string TRANSCENDENCE = "transcendence";           // Cross-category divergence
+    public const string CONTEMPLATION = "contemplation";           // Cognitive divergence
+    public const string WONDER = "wonder";                         // Default ethereal divergence
+    public const string DIMENSIONAL_SEPARATION = "dimensional_separation";
 }
 ```
 

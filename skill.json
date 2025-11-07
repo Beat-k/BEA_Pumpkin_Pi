@@ -3,7 +3,7 @@
     "publishingInformation": {
       "locales": {
         "en-US": {
-          "summary": "BEA Pumpkin Pi - Educational Audio Technology & Conversation Enhancement for Echo Dot",
+          "summary": "BEA Pumpkin Pi - Voice-First Educational Audio Technology for Echo Dot & All Alexa Devices",
           "examplePhrases": [
             "Alexa, ask Pumpkin Pi to teach me about audio",
             "Alexa, tell Pumpkin Pi to explain beatboxing",
@@ -21,7 +21,7 @@
             "interactive learning"
           ],
           "name": "BEA Pumpkin Pi",
-          "description": "Educational Audio Technology Learning Platform for Amazon Echo Dot. Learn about spatial audio concepts, beatboxing techniques, sound engineering principles, and audio technology through interactive conversation. Enhanced with BEA emotional intelligence for personalized learning experiences. Transform your Echo Dot into an engaging audio education companion."
+          "description": "Voice-first educational audio technology learning platform optimized for Amazon Echo Dot and all Alexa-enabled devices. Perfect for screenless devices! Learn about spatial audio concepts, beatboxing techniques, sound engineering principles, and audio technology through interactive voice conversation. Enhanced with BEA emotional intelligence for personalized learning experiences. No screen required - all interactions are voice-based. Transform your Echo Dot into an engaging audio education companion through conversation alone."
         }
       },
       "isAvailableWorldwide": true,
@@ -37,9 +37,6 @@
         "interfaces": [
           {
             "type": "AUDIO_PLAYER"
-          },
-          {
-            "type": "ALEXA_PRESENTATION_APL"
           }
         ]
       }
