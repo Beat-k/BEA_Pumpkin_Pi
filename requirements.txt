@@ -1,0 +1,22 @@
+# BEA Pumpkin Pi - AWS Lambda Requirements
+#
+# This skill uses ONLY Python standard library for AWS Lambda compatibility.
+# No external dependencies required for production deployment.
+#
+# The code is optimized for AWS Lambda Python 3.9 runtime with zero external packages.
+# This ensures fast cold starts and no dependency conflicts.
+
+# No requirements - Pure Python standard library only!
+
+# Standard library imports used (already included in Python 3.9):
+# - json (JSON parsing for Alexa requests/responses)
+# - random (Random number generation for emotional variations)
+# - time (Timestamp generation for performance tracking)
+# - math (Mathematical operations for BEA calculations)
+# - typing (Type hints for code clarity)
+# - datetime (Timestamp handling with timezone support)
+
+# For local development/testing only (optional):
+# pytest>=7.0.0  # For running unit tests
+# black>=22.0.0  # For code formatting
+# mypy>=0.950    # For type checking

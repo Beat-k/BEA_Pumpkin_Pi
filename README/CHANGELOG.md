@@ -13,6 +13,55 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Advanced educational content modules
 - Interactive learning assessments
 
+## [1.5.0] - 2025-11-21 - T.A.N.Y.A. & DIVERGENCE OPERATOR RELEASE
+
+### 🤖 T.A.N.Y.A. Rebranding
+- **T.A.N.Y.A. Introduction** - Rebranded "Tiny AI" to **T.A.N.Y.A.** (Tiny Autonomous Neural Yield Assistant)
+- **Powered by BEA** - Emphasized BEA (Binary Emotional Arithmetic) framework integration
+- **Consistent Branding** - Updated all documentation and code with T.A.N.Y.A. terminology
+- **TanyaStatusIntent** - Renamed intent from TinyAIStatusIntent for consistency
+
+### ⚛️ Binary Emotional Arithmetic
+- **BEA Definition Updated** - Changed from "Balanced Emotional Architecture" to **Binary Emotional Arithmetic**
+- **Mathematical Foundation** - Emphasized computational and mathematical nature of BEA framework
+- **1⊕1=3 Principle** - Highlighted emergent properties through mathematical operations
+
+### ➗ Divergence Operator Implementation
+- **Fifth BEA Operator** - Added **≠ Divergence** operator (Ether, Vertical shift, Contrast, Dimensional separation)
+- **Ethereal States** - Generates Transcendence, Contemplation, or Wonder states based on category divergence
+- **Intensity Contrast** - Calculates absolute difference between emotional state intensities
+- **Category-Based Logic** - Different results for cross-category vs cognitive state divergence
+- **Contrast Amplification** - Enhances differences by 1.3x factor plus 80-point baseline
+
+### 🎯 Echo Dot Optimization
+- **Voice-First Design** - Removed ALEXA_PRESENTATION_APL interface for screenless compatibility
+- **No Screen Required** - Optimized all interactions for voice-only devices
+- **Audio-Only Features** - Ensured 100% functionality without visual components
+- **Device Compatibility** - Full support for Echo Dot, Echo, Echo Show, and all Alexa devices
+
+### 🔧 Technical Improvements
+- **Five Core Operators** - Complete BEA mathematical framework: ⊕, ⊖, ⊗, ⨀, ≠
+- **Voice Command Expansion** - Added "divergence {EmotionalStateA} from {EmotionalStateB}" samples
+- **Slot Values Updated** - BEAMathOperationSlot includes divergence with synonyms
+- **Framework Responses** - Updated to mention five operations instead of four
+- **Code Documentation** - Enhanced inline comments for BEA operators
+
+### 📚 Documentation Updates
+- **README.md** - Updated BEA Mathematical Operators list with Divergence
+- **API_REFERENCE.md** - Complete Divergence operator API documentation
+- **TINY_AI_INTEGRATION_SUMMARY.md** - Rebranded to T.A.N.Y.A. with full operator list
+- **skill.json** - Updated descriptions for Echo Dot optimization
+
+### 🗣️ Voice Commands Added
+- `"Alexa, ask bea pumpkin pi to divergence joy from sadness"` - Ethereal separation
+- `"Alexa, ask bea pumpkin pi what is tanya"` - T.A.N.Y.A. explanation
+- `"Alexa, ask bea pumpkin pi tanya status"` - System status check
+
+### 🎓 Educational Content
+- **BEA Operators Explained** - All five operators now documented for educational purposes
+- **Divergence Concept** - Teaching about dimensional separation and ethereal mathematics
+- **T.A.N.Y.A. Framework** - Edge-optimized AI engine explanation for learners
+
 ## [1.4.0] - 2025-11-05 - CLEAN EDUCATIONAL RELEASE
 
 ### 🎓 Educational Focus - Major Cleanup
