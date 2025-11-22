@@ -10,10 +10,10 @@ EDUCATIONAL PURPOSE ONLY - Teaches audio concepts through conversation
 Does NOT process or enhance actual audio hardware
 
 T.A.N.Y.A. = Tiny Autonomous Neural Yield Assistant
-- Powered by BEA (Binary Emotional Arithmetic) Framework
-- Edge-optimized with 32-state emotional intelligence
+- Powered by BEA (Binary E-motion Arithmetic) Framework
+- Edge-optimized with 32-state e-motion intelligence
 - Autonomous processing for voice devices
-- BEA = Binary Emotional Arithmetic using 1⊕1=3 principle
+- BEA = Binary E-motion Arithmetic using 1⊕1=3 principle
 
 Handler: lambda_function.lambda_handler
 Runtime: Python 3.9
@@ -38,8 +38,8 @@ from datetime import datetime, timezone
 BEA_VERSION = "1.4.0"
 ARIA_PROTOCOL_VERSION = "1.0"
 
-# BEA Framework Emotional State IDs (32-State System)
-class EmotionalStateIds:
+# BEA Framework E-motion State IDs (32-State System)
+class EMotionStateIds:
     # Baseline
     NEUTRAL = 0
     
@@ -104,9 +104,9 @@ class BEAOperators:
     AMPLIFY = "⨀"      # Enhances from baseline
     DIVERGENCE = "≠"   # Ether, vertical shift, contrast, dimensional separation
 
-# BEA Emotional State System
+# BEA E-motion State System
 class BEABit:
-    """Simplified BEABit for AWS Lambda - Core emotional state entity"""
+    """Simplified BEABit for AWS Lambda - Core e-motion state entity"""
     
     def __init__(self, state_id, name, symbol, intensity=128, category="neutral"):
         self.id = state_id
@@ -132,40 +132,40 @@ class BEABit:
 
 # BEA Calculator for AWS Lambda
 class BEACalculator:
-    """Simplified BEA mathematical operations for emotional states"""
+    """Simplified BEA mathematical operations for e-motion states"""
     
     @staticmethod
     def combust(state_a, state_b):
         """Combust operation (⊕) - 1+1=3 principle"""
-        # Create emergent properties through emotional fusion
+        # Create emergent properties through e-motion fusion
         new_intensity = min(255, int(state_a.level * 1.5 + state_b.level * 0.8))
         
         # Determine emergent state based on combination
-        if state_a.id == EmotionalStateIds.CURIOSITY and state_b.id == EmotionalStateIds.BLISS:
-            return BEABit(EmotionalStateIds.INSPIRATION, "Inspiration", "🎨", new_intensity, "energetic")
+        if state_a.id == EMotionStateIds.CURIOSITY and state_b.id == EMotionStateIds.BLISS:
+            return BEABit(EMotionStateIds.INSPIRATION, "Inspiration", "🎨", new_intensity, "energetic")
         elif state_a.category == "cognitive" and state_b.category == "transcendent":
-            return BEABit(EmotionalStateIds.ENLIGHTENMENT, "Enlightenment", "🌅", new_intensity, "transcendent")
+            return BEABit(EMotionStateIds.ENLIGHTENMENT, "Enlightenment", "🌅", new_intensity, "transcendent")
         else:
             # Default emergent state
-            return BEABit(EmotionalStateIds.WONDER, "Wonder", "✨", new_intensity, "transcendent")
+            return BEABit(EMotionStateIds.WONDER, "Wonder", "✨", new_intensity, "transcendent")
     
     @staticmethod
     def balance(state_a, state_b):
         """Balance operation (⊖) - Equilibrium seeking"""
         balanced_intensity = int((state_a.level + state_b.level) * 0.7)
-        return BEABit(EmotionalStateIds.HARMONY, "Harmony", "☯️", balanced_intensity, "peaceful")
+        return BEABit(EMotionStateIds.HARMONY, "Harmony", "☯️", balanced_intensity, "peaceful")
     
     @staticmethod
     def dissolve(state_a, state_b):
         """Dissolve operation (⊗) - State degradation"""
         dissolved_intensity = int(state_a.level * 0.6)
-        return BEABit(EmotionalStateIds.RELIEF, "Relief", "😌", dissolved_intensity, "peaceful")
+        return BEABit(EMotionStateIds.RELIEF, "Relief", "😌", dissolved_intensity, "peaceful")
     
     @staticmethod
     def amplify(state_a, state_b):
         """Amplify operation (⨀) - Enhancement"""
         amplified_intensity = min(255, int(state_a.level * 1.2))
-        return BEABit(EmotionalStateIds.CLARITY, "Clarity", "💡", amplified_intensity, "cognitive")
+        return BEABit(EMotionStateIds.CLARITY, "Clarity", "💡", amplified_intensity, "cognitive")
 
     @staticmethod
     def divergence(state_a, state_b):
@@ -179,13 +179,13 @@ class BEACalculator:
         # Based on the contrast between state categories
         if state_a.category != state_b.category:
             # Strong divergence creates transcendence
-            return BEABit(EmotionalStateIds.TRANSCENDENCE, "Transcendence", "🌌", diverged_intensity, "transcendent")
+            return BEABit(EMotionStateIds.TRANSCENDENCE, "Transcendence", "🌌", diverged_intensity, "transcendent")
         elif state_a.category == "cognitive" or state_b.category == "cognitive":
             # Cognitive divergence creates contemplation
-            return BEABit(EmotionalStateIds.CONTEMPLATION, "Contemplation", "🤔", diverged_intensity, "cognitive")
+            return BEABit(EMotionStateIds.CONTEMPLATION, "Contemplation", "🤔", diverged_intensity, "cognitive")
         else:
             # Default ethereal state from divergence
-            return BEABit(EmotionalStateIds.WONDER, "Wonder", "✨", diverged_intensity, "transcendent")
+            return BEABit(EMotionStateIds.WONDER, "Wonder", "✨", diverged_intensity, "transcendent")
 
 # ARIA Protocol for AWS Lambda
 class ARIAProtocol:
@@ -196,7 +196,7 @@ class ARIAProtocol:
         self.active_devices = []
         self.sync_status = "ready"
     
-    def create_aria_message(self, intent, emotional_state=None, destination="bea_aura"):
+    def create_aria_message(self, intent, emotion_state=None, destination="bea_aura"):
         """Create ARIA protocol message for BEA ecosystem"""
         return {
             "aria_version": self.protocol_version,
@@ -204,7 +204,7 @@ class ARIAProtocol:
             "source": "bea_pumpkin_pi",
             "destination": destination,
             "intent": intent,
-            "emotional_state": emotional_state.to_dict() if emotional_state else None,
+            "emotion_state": emotion_state.to_dict() if emotion_state else None,
             "sync_status": self.sync_status,
             "message_type": "voice_command"
         }
@@ -289,7 +289,7 @@ class BEAEducationalEngine:
         self.audio_state = {
             "enhancement_level": 3,
             "spatial_position": {"x": 0, "y": 0, "z": 0},
-            "emotional_state": 8,
+            "emotion_state": 8,
             "gaming_mode": False,
             "beatbox_listening": False,
             "tiny_ai_active": True,
@@ -370,8 +370,8 @@ class BEAEducationalEngine:
             "note": "This teaches beatbox concepts - no audio recognition occurs"
         }
     
-    def set_emotional_state(self, emotion: str):
-        """Set emotional processing state"""
+    def set_emotion_state(self, emotion: str):
+        """Set e-motion processing state"""
         emotional_mappings = {
             "curious": 1, "calm": 2, "relaxed": 3, "excited": 4, "energetic": 5,
             "creative": 6, "analytical": 7, "focused": 8, "determined": 9, "confident": 10,
@@ -379,7 +379,7 @@ class BEAEducationalEngine:
         }
         
         emotion_id = emotional_mappings.get(emotion.lower(), 8)
-        self.audio_state["emotional_state"] = emotion_id
+        self.audio_state["emotion_state"] = emotion_id
         
         return {
             "success": True,
@@ -420,7 +420,7 @@ class BEAEducationalEngine:
             "system_status": "EDUCATIONAL_CONTENT_ACTIVE",
             "bea_engine_version": BEA_VERSION,
             "engine_status": BEA_ENGINE_STATUS,
-            "emotional_state": f"E{self.audio_state['emotional_state']:02d}",
+            "emotion_state": f"E{self.audio_state['emotion_state']:02d}",
             "education_system": {
                 "status": self.education_status,
                 "session_active": learning_report["education_status"]["session_active"],
@@ -513,7 +513,7 @@ def handle_intent(event, session_id):
     elif intent_name == "TinyAIStatusIntent" or intent_name == "TanyaStatusIntent":
         return handle_tanya_status()
     elif intent_name == "EmotionalStateIntent":
-        return handle_emotional_state(slots)
+        return handle_emotion_state(slots)
     elif intent_name == "SpatialAudioIntent":
         return handle_spatial_audio(slots)
     elif intent_name == "PerformanceStatusIntent":
@@ -543,8 +543,8 @@ def handle_bea_calculator(slots):
         state_b_name = get_slot_value(slots, "EmotionalStateB", "calm")
         
         # Create BEABit states for the operation
-        state_a = BEABit(EmotionalStateIds.CURIOSITY, state_a_name.title(), "🤔", 150, "cognitive")
-        state_b = BEABit(EmotionalStateIds.CALMNESS, state_b_name.title(), "😌", 120, "peaceful")
+        state_a = BEABit(EMotionStateIds.CURIOSITY, state_a_name.title(), "🤔", 150, "cognitive")
+        state_b = BEABit(EMotionStateIds.CALMNESS, state_b_name.title(), "😌", 120, "peaceful")
         
         # Perform the mathematical operation
         if operation == "combust":
@@ -569,7 +569,7 @@ def handle_bea_calculator(slots):
         response_text = f"BEA Calculator performing {operation} operation {operation_symbol}. " \
                        f"Processing {state_a_name} and {state_b_name}. " \
                        f"Result: {result_state.name} {result_state.symbol} with intensity {result_state.level}. " \
-                       f"The BEA mathematical framework has created emergent emotional properties through " \
+                       f"The BEA mathematical framework has created emergent e-motion properties through " \
                        f"sophisticated state mathematics."
         
         return build_response(
@@ -591,23 +591,23 @@ def handle_bea_framework(slots):
         component = get_slot_value(slots, "FrameworkComponent", "emotional")
         
         if component == "emotional":
-            response_text = f"BEA Framework Emotional Intelligence system active. " \
-                           f"Currently running 32-state emotional architecture with " \
+            response_text = f"BEA Framework E-motion Intelligence system active. " \
+                           f"Currently running 32-state e-motion architecture with " \
                            f"complete cognitive, peaceful, energetic, and transcendent categories. " \
-                           f"Emotional processing includes curiosity, calmness, excitement, wonder, " \
+                           f"E-motion processing includes curiosity, calmness, excitement, wonder, " \
                            f"and 28 additional sophisticated states for comprehensive intelligence."
                            
         elif component == "intelligence":
             response_text = f"BEA Intelligence Architecture operational. " \
-                           f"Advanced AI framework integrating T.A.N.Y.A. with emotional mathematics. " \
+                           f"Advanced AI framework integrating T.A.N.Y.A. with e-motion mathematics. " \
                            f"Real-time processing includes pattern recognition, state calculations, " \
                            f"and cross-device synchronization via ARIA Protocol."
                            
         elif component == "grid":
-            response_text = f"BEA Emotional Grid system active. " \
-                           f"32x32 cellular automata architecture processing emotional states " \
+            response_text = f"BEA E-motion Grid system active. " \
+                           f"32x32 cellular automata architecture processing e-motion states " \
                            f"with mathematical operations: combust, balance, dissolve, amplify, and divergence. " \
-                           f"Grid enables complex emotional intelligence beyond simple responses."
+                           f"Grid enables complex e-motion intelligence beyond simple responses."
 
         elif component == "calculator":
             response_text = f"BEA Calculator system operational. " \
@@ -615,14 +615,14 @@ def handle_bea_framework(slots):
                            f"Combust creates emergent properties, Balance seeks equilibrium, " \
                            f"Dissolve simplifies complexity, Amplify enhances from baseline, " \
                            f"Divergence creates ether and dimensional separation. " \
-                           f"Advanced emotional mathematics ready for processing."
+                           f"Advanced e-motion mathematics ready for processing."
                            
         else:
             response_text = f"BEA Framework version {BEA_VERSION} fully operational. " \
-                           f"Complete 32-state emotional intelligence system with " \
+                           f"Complete 32-state e-motion intelligence system with " \
                            f"T.A.N.Y.A. (Tiny Autonomous Neural Yield Assistant) integration, ARIA Protocol communication, " \
                            f"mathematical operations, and advanced grid processing. " \
-                           f"Framework represents revolutionary approach to emotional AI."
+                           f"Framework represents revolutionary approach to e-motion AI."
         
         return build_response(
             response_text,
@@ -630,7 +630,7 @@ def handle_bea_framework(slots):
             card_content=f"🧠 BEA Framework v{BEA_VERSION}\n\n"
                         f"Component: {component.title()}\n"
                         f"Status: Operational\n"
-                        f"Emotional States: 32\n"
+                        f"E-motion States: 32\n"
                         f"ARIA Protocol: v{ARIA_PROTOCOL_VERSION}"
         )
         
@@ -693,7 +693,7 @@ def handle_tanya_status():
         f"through interactive conversation and concept explanation. "
         f"Available learning modes: {', '.join(capabilities['learning_modes'])}. "
         f"T.A.N.Y.A. features include autonomous edge processing, neural pattern recognition, "
-        f"yield-optimized responses, and BEA's 32-state emotional intelligence for personalized "
+        f"yield-optimized responses, and BEA's 32-state e-motion intelligence for personalized "
         f"adaptive learning. This lightweight AI assistant teaches you about audio technology "
         f"through natural conversation!"
     )
@@ -708,24 +708,24 @@ def handle_tiny_ai_status():
     """Legacy function - redirects to handle_tanya_status() for backward compatibility"""
     return handle_tanya_status()
 
-def handle_emotional_state(slots):
-    """Handle emotional state education"""
+def handle_emotion_state(slots):
+    """Handle e-motion state education"""
     emotion = get_slot_value(slots, "EmotionalState", "focused")
     
-    result = bea_engine.set_emotional_state(emotion)
+    result = bea_engine.set_emotion_state(emotion)
     
     speech_text = (
-        f"Great question about {emotion} emotional states! In audio technology, "
-        f"emotional context affects how we perceive sound. The BEA Framework uses "
-        f"32 different emotional states to study audio perception. Your chosen state "
+        f"Great question about {emotion} e-motion states! In audio technology, "
+        f"e-motion context affects how we perceive sound. The BEA Framework uses "
+        f"32 different e-motion states to study audio perception. Your chosen state "
         f"{emotion} with profile {result['framework_status']} represents how different "
         f"moods might influence audio processing in real systems. This is educational "
-        f"content about emotional AI concepts!"
+        f"content about e-motion AI concepts!"
     )
     
     return build_response(
         speech_text,
-        card_title=f"BEA Emotional Education - {emotion.title()}",
+        card_title=f"BEA E-motion Education - {emotion.title()}",
         card_content=f"Learning about: {emotion.title()}\nProfile: {result['framework_status']}\nEducational Content Only"
     )
 
@@ -837,8 +837,8 @@ def get_slot_value(slots, slot_name, default=""):
 def handle_bea_aural():
     """Handle BEA Aural sound quality analysis"""
     try:
-        # Create emotional state for aural analysis
-        aural_state = BEABit(EmotionalStateIds.CLARITY, "Clarity", "💡", 180, "cognitive")
+        # Create e-motion state for aural analysis
+        aural_state = BEABit(EMotionStateIds.CLARITY, "Clarity", "💡", 180, "cognitive")
         
         # Simulate aural analysis
         frequency_analysis = {
@@ -859,13 +859,13 @@ def handle_bea_aural():
         
         response_text = f"BEA Aural analysis complete. Your bass response is {bass_pct}% optimal. " \
                        f"Audio clarity is at {clarity_pct}%. Spatial positioning accuracy is {spatial_pct}%. " \
-                       f"Current emotional resonance state: {aural_state.name} with {aural_state.symbol}. " \
+                       f"Current e-motion resonance state: {aural_state.name} with {aural_state.symbol}. " \
                        f"ARIA protocol sync ready for BEA Aura."
         
         return build_response(
             response_text, 
             card_title="BEA Aural Analysis",
-            card_content=f"🎵 Audio Quality Report\n\nBass: {bass_pct}%\nClarity: {clarity_pct}%\nSpatial: {spatial_pct}%\n\nEmotional State: {aural_state.name} {aural_state.symbol}"
+            card_content=f"🎵 Audio Quality Report\n\nBass: {bass_pct}%\nClarity: {clarity_pct}%\nSpatial: {spatial_pct}%\n\nE-motion State: {aural_state.name} {aural_state.symbol}"
         )
         
     except Exception as e:
@@ -877,40 +877,40 @@ def handle_aria_protocol(slots):
         command = get_slot_value(slots, "ARIACommand", "status")
         destination = get_slot_value(slots, "Destination", "all_devices")
         
-        # Create appropriate emotional state based on command
+        # Create appropriate e-motion state based on command
         if command == "sync":
-            emotional_state = BEABit(EmotionalStateIds.HARMONY, "Harmony", "☯️", 200, "peaceful")
+            emotion_state = BEABit(EMotionStateIds.HARMONY, "Harmony", "☯️", 200, "peaceful")
         elif command == "status":
-            emotional_state = BEABit(EmotionalStateIds.CLARITY, "Clarity", "💡", 180, "cognitive")
+            emotion_state = BEABit(EMotionStateIds.CLARITY, "Clarity", "💡", 180, "cognitive")
         elif command == "resonance":
-            emotional_state = BEABit(EmotionalStateIds.WONDER, "Wonder", "✨", 220, "transcendent")
+            emotion_state = BEABit(EMotionStateIds.WONDER, "Wonder", "✨", 220, "transcendent")
         else:
-            emotional_state = BEABit(EmotionalStateIds.CURIOSITY, "Curiosity", "🤔", 150, "cognitive")
+            emotion_state = BEABit(EMotionStateIds.CURIOSITY, "Curiosity", "🤔", 150, "cognitive")
         
         # Create ARIA protocol message
         aria = ARIAProtocol()
-        aria_message = aria.create_aria_message(f"aria_{command}", emotional_state, destination)
+        aria_message = aria.create_aria_message(f"aria_{command}", emotion_state, destination)
         routing_result = aria.route_to_bea_aura(aria_message)
         
         # Generate contextual responses based on command and destination
         if command == "sync":
             if destination == "bea_aura":
                 response_text = f"ARIA protocol synchronization initiated with BEA Aura NAS. " \
-                               f"Cross-device alignment in progress. Emotional resonance: {emotional_state.name} {emotional_state.symbol}. " \
+                               f"Cross-device alignment in progress. E-motion resonance: {emotion_state.name} {emotion_state.symbol}. " \
                                f"All your BEA ecosystem devices will be synchronized through the Aural Resonance framework."
             else:
                 response_text = f"ARIA sync targeting {destination.replace('_', ' ')}. " \
-                               f"Intelligent alignment protocol active with {emotional_state.name} resonance."
+                               f"Intelligent alignment protocol active with {emotion_state.name} resonance."
         
         elif command == "status":
             response_text = f"ARIA Protocol status: Active and operational. " \
                            f"Aural Resonance framework synchronized. " \
-                           f"Intelligent Alignment achieved with {emotional_state.name} clarity {emotional_state.symbol}. " \
+                           f"Intelligent Alignment achieved with {emotion_state.name} clarity {emotion_state.symbol}. " \
                            f"Protocol version {ARIA_PROTOCOL_VERSION} running smoothly."
         
         else:
             response_text = f"ARIA Protocol processing {command} command. " \
-                           f"Intelligent alignment active with {emotional_state.name} state. " \
+                           f"Intelligent alignment active with {emotion_state.name} state. " \
                            f"Message routed to {destination.replace('_', ' ')} via Aural Resonance framework."
         
         return build_response(
@@ -918,7 +918,7 @@ def handle_aria_protocol(slots):
             card_title=f"ARIA Protocol: {command.title()}",
             card_content=f"🌐 ARIA - Aural Resonance & Intelligent Alignment\n\n"
                         f"Command: {command}\nDestination: {destination.replace('_', ' ')}\n"
-                        f"Emotional State: {emotional_state.name} {emotional_state.symbol}"
+                        f"E-motion State: {emotion_state.name} {emotion_state.symbol}"
         )
         
     except Exception as e:

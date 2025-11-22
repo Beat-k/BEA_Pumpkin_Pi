@@ -86,20 +86,20 @@
           ]
         },
         {
-          "name": "EmotionalStateIntent",
+          "name": "EMotionStateIntent",
           "slots": [
             {
-              "name": "EmotionalState",
-              "type": "EmotionalStateSlot"
+              "name": "EMotionState",
+              "type": "EMotionStateSlot"
             }
           ],
           "samples": [
-            "set emotion to {EmotionalState}",
-            "I'm feeling {EmotionalState}",
-            "change mood to {EmotionalState}",
-            "set emotional state {EmotionalState}",
-            "adjust for {EmotionalState}",
-            "optimize for {EmotionalState} mood"
+            "set emotion to {EMotionState}",
+            "I'm feeling {EMotionState}",
+            "change mood to {EMotionState}",
+            "set e-motion state {EMotionState}",
+            "adjust for {EMotionState}",
+            "optimize for {EMotionState} mood"
           ]
         },
         {
@@ -230,7 +230,7 @@
             "aria intelligence report",
             "activate aria protocol",
             "check intelligent alignment",
-            "aria emotional resonance",
+            "aria e-motion resonance",
             "aria quality analysis",
             "aria protocol sync",
             "aria protocol {ARIACommand}",
@@ -258,28 +258,28 @@
               "type": "BEAMathOperationSlot"
             },
             {
-              "name": "EmotionalStateA",
-              "type": "EmotionalStateSlot"
+              "name": "EMotionStateA",
+              "type": "EMotionStateSlot"
             },
             {
-              "name": "EmotionalStateB",
-              "type": "EmotionalStateSlot"
+              "name": "EMotionStateB",
+              "type": "EMotionStateSlot"
             }
           ],
           "samples": [
             "bea calculator",
-            "calculate emotional states",
-            "combust {EmotionalStateA} and {EmotionalStateB}",
-            "balance {EmotionalStateA} with {EmotionalStateB}",
-            "dissolve {EmotionalStateA} into {EmotionalStateB}",
-            "amplify {EmotionalStateA} using {EmotionalStateB}",
-            "divergence {EmotionalStateA} from {EmotionalStateB}",
-            "{MathOperation} {EmotionalStateA} and {EmotionalStateB}",
+            "calculate e-motion states",
+            "combust {EMotionStateA} and {EMotionStateB}",
+            "balance {EMotionStateA} with {EMotionStateB}",
+            "dissolve {EMotionStateA} into {EMotionStateB}",
+            "amplify {EMotionStateA} using {EMotionStateB}",
+            "divergence {EMotionStateA} from {EMotionStateB}",
+            "{MathOperation} {EMotionStateA} and {EMotionStateB}",
             "calculate {MathOperation} operation",
-            "emotional math {MathOperation}",
+            "e-motion math {MathOperation}",
             "bea math {MathOperation}",
             "perform {MathOperation} calculation",
-            "emotional state {MathOperation}"
+            "e-motion state {MathOperation}"
           ]
         },
         {
@@ -299,9 +299,9 @@
             "bea {FrameworkComponent} status",
             "check {FrameworkComponent} system",
             "framework {FrameworkComponent} report",
-            "bea emotional intelligence",
+            "bea e-motion intelligence",
             "thirty two state system",
-            "emotional state grid",
+            "e-motion state grid",
             "bea architecture status"
           ]
         }
@@ -344,7 +344,7 @@
           ]
         },
         {
-          "name": "EmotionalStateSlot",
+          "name": "EMotionStateSlot",
           "values": [
             {"name": {"value": "neutral", "synonyms": ["baseline", "default", "normal", "standard"]}},
             {"name": {"value": "curious", "synonyms": ["interested", "inquisitive", "wondering"]}},
@@ -414,10 +414,10 @@
           "name": "ConceptTopicSlot",
           "values": [
             {"name": {"value": "audio theory", "synonyms": ["sound theory", "acoustic theory", "audio science"]}},
-            {"name": {"value": "emotional intelligence", "synonyms": ["emotion ai", "feeling recognition", "mood detection"]}},
+            {"name": {"value": "e-motion intelligence", "synonyms": ["emotion ai", "feeling recognition", "mood detection"]}},
             {"name": {"value": "conversation design", "synonyms": ["dialog design", "chat systems", "voice interfaces"]}},
             {"name": {"value": "beatbox education", "synonyms": ["vocal percussion", "mouth drumming", "rhythm training"]}},
-            {"name": {"value": "bea framework", "synonyms": ["bea system", "emotional framework", "ai architecture"]}}
+            {"name": {"value": "bea framework", "synonyms": ["bea system", "e-motion framework", "ai architecture"]}}
           ]
         },
         {

@@ -35,7 +35,7 @@ We welcome contributions to the BEA Pumpkin Pi Amazon Alexa skill! This project 
 - Maintain compatibility with existing BEA components
 - Follow BEA naming conventions (BEA_*, BEA*)
 - Preserve real-time performance requirements (<100ms latency)
-- Integrate with 32-state emotional framework
+- Integrate with 32-state e-motion framework
 
 ### Alexa Skills Kit Best Practices
 - Follow Amazon's voice interface design guidelines
@@ -101,7 +101,7 @@ python -m pytest tests/performance/ -v
 
 ### BEA 4D Audio Core
 - Maintain spatial positioning accuracy
-- Preserve emotional state integration
+- Preserve e-motion state integration
 - Optimize for Echo Dot hardware constraints
 - Test with various audio sources
 
@@ -129,15 +129,15 @@ python -m pytest tests/performance/ -v
 - Keep responses concise and natural
 - Provide context-appropriate feedback
 - Include helpful suggestions when relevant
-- Test with various emotional states
+- Test with various e-motion states
 
-## 🧠 Emotional Intelligence Contributions
+## 🧠 E-motion Intelligence Contributions
 
-### Emotional State Integration
+### E-motion State Integration
 - Maintain compatibility with 32-state framework
-- Validate emotional coefficient calculations
+- Validate e-motion coefficient calculations
 - Test state transitions and stability
-- Document emotional processing behavior
+- Document e-motion processing behavior
 
 ### User Profiling
 - Preserve user privacy and preferences
